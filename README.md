@@ -1,13 +1,7 @@
-# DNA_Says
+# DNA
 
-Team Name: DNA_Says
+Team Name: DNA
 
-Team Members: Kareem Abdel Mesih, John-Paul Dakran, Shady Nessim
-
+Team Members: Kareem Abdel Mesih (abdelk2), John-Paul Dakran (dakranj), Shady Nessim (nessimss)
 
 This project is a reimplementation of the famous game "Simon Says"
-
-The folders and files for this project are as follows:
-
-Doc - Documentation for the project
-Code - Implementation

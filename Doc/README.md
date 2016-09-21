@@ -1,5 +1,5 @@
 # Documentation folders
 
-The folders and files for this folder are as follows:
+This folder contains all the related documents of the project.
 
-Describe ...
+All documents that are to be submitted will be found here.

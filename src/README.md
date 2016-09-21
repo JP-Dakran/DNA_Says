@@ -1,5 +1,1 @@
-# Project Name Source Code
-
-The folders and files for this project are as follows:
-
-...
+This folder holds all the files that contain code.

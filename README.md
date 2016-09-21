@@ -1,4 +1,4 @@
-# Project Name
+# DNA_Says
 
 Team Name: DNA_Says
 

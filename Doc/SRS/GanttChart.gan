@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="DNA_Says" company="DNA" webLink="https://gitlab.cas.mcmaster.ca/dakranj/DNA_Says" view-date="2016-08-28" view-index="0" gantt-divider-location="524" resource-divider-location="300" version="2.8.1" locale="en_CA">
+    <description><![CDATA[Gantt Chart]]></description>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd3" name="Name" width="308" order="0"/>
+        <field id="tpd4" name="Begin date" width="77" order="1"/>
+        <field id="tpd5" name="End date" width="135" order="2"/>
+        <timeline><![CDATA[0]]></timeline>
+        <option id="color.recent"><![CDATA[#000000 #cc0000 #ffffcc #33ffcc #666666 #999900 #006666 #ccccff #99ff99 #0066cc]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="1) Team Formation" color="#8cb6ce" meeting="false" start="2016-09-14" duration="3" complete="0" expand="false">
+            <task id="8" name="1.1) Find Team Members" meeting="false" start="2016-09-14" duration="1" complete="0" expand="true"/>
+            <task id="10" name="1.2) Branstorming Ideas" color="#8cb6ce" meeting="false" start="2016-09-14" duration="3" complete="0" expand="true"/>
+            <task id="12" name="1.3) Vote on Ideas" color="#8cb6ce" meeting="false" start="2016-09-16" duration="1" complete="0" expand="true"/>
+            <task id="14" name="1.4) Project Selection" color="#8cb6ce" meeting="true" start="2016-09-17" duration="0" complete="0" expand="true"/>
+        </task>
+        <task id="18" name="2) Project Approval" color="#33ff33" meeting="false" start="2016-09-21" duration="3" complete="0" expand="false">
+            <task id="21" name="2.1) Meeting with Dr. Smith" color="#33ff33" meeting="false" start="2016-09-21" duration="1" complete="0" expand="true"/>
+            <task id="35" name="2.2) Project Approved" color="#33ff33" meeting="true" start="2016-09-21" duration="0" complete="0" expand="true"/>
+            <task id="24" name="2.3) Design Decisions" color="#33ff33" meeting="false" start="2016-09-21" duration="3" complete="0" expand="true">
+                <task id="27" name="2.3.1) Programming Language" color="#33ff33" meeting="false" start="2016-09-21" duration="3" complete="0" expand="true"/>
+                <task id="28" name="2.3.2) Programming IDE" color="#33ff33" meeting="false" start="2016-09-21" duration="3" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="44" name="3) Problem Statement" color="#ff6666" meeting="true" start="2016-09-23" duration="0" complete="0" expand="true"/>
+        <task id="53" name="4) Development Plan" color="#0066cc" meeting="true" start="2016-10-07" duration="0" complete="0" expand="true"/>
+        <task id="90" name="Implementation" color="#000000" meeting="false" start="2016-10-09" duration="23" complete="0" expand="false">
+            <task id="95" name="Recording The Sounds" color="#000000" meeting="true" start="2016-10-09" duration="0" complete="0" expand="true"/>
+            <task id="96" name="Drawing The Buttons" color="#000000" meeting="false" start="2016-10-09" duration="1" complete="0" expand="true"/>
+            <task id="97" name="Back-End Logic" color="#000000" meeting="false" start="2016-10-10" duration="8" complete="0" expand="true"/>
+            <task id="98" name="Front-End User Interface" color="#000000" meeting="false" start="2016-10-17" duration="8" complete="0" expand="true"/>
+            <task id="99" name="Linking Back-End to Front-End" color="#000000" meeting="false" start="2016-10-24" duration="8" complete="0" expand="true"/>
+        </task>
+        <task id="91" name="Testing" color="#cc0000" meeting="false" start="2016-11-01" duration="18" complete="0" expand="false">
+            <task id="92" name="Unit Testing" color="#cc0000" meeting="false" start="2016-11-01" duration="8" complete="0" expand="true"/>
+            <task id="93" name="User Testing" color="#cc0000" meeting="false" start="2016-11-08" duration="11" complete="0" expand="true"/>
+            <task id="94" name="Survey" color="#cc0000" meeting="false" start="2016-11-08" duration="11" complete="0" expand="true"/>
+        </task>
+        <task id="59" name="5) Requirements Document- Revision 0" color="#99ff99" meeting="true" start="2016-10-07" duration="0" complete="0" expand="true">
+            <task id="131" name="4) Project Issues" color="#8cb6ce" meeting="false" start="2016-10-07" duration="1" complete="0" expand="true">
+                <task id="132" name="4.1) Open Issues" color="#8cb6ce" meeting="false" start="2016-10-07" duration="1" complete="0" expand="true"/>
+                <task id="133" name="4.2) Off-the-Shelf Solutions" color="#8cb6ce" meeting="false" start="2016-10-07" duration="1" complete="0" expand="true"/>
+                <task id="134" name="4.3) New Problems" color="#8cb6ce" meeting="false" start="2016-10-07" duration="1" complete="0" expand="true"/>
+                <task id="135" name="4.4) Tasks" color="#8cb6ce" meeting="false" start="2016-10-07" duration="1" complete="0" expand="true"/>
+                <task id="136" name="4.5) Migration to the New Project" color="#8cb6ce" meeting="false" start="2016-10-07" duration="1" complete="0" expand="true"/>
+                <task id="137" name="4.6) Risks" color="#8cb6ce" meeting="false" start="2016-10-07" duration="1" complete="0" expand="true"/>
+                <task id="138" name="4.7) Costs" color="#8cb6ce" meeting="false" start="2016-10-07" duration="1" complete="0" expand="true"/>
+                <task id="139" name="4.8) User Documentation and Training" color="#8cb6ce" meeting="false" start="2016-10-07" duration="1" complete="0" expand="true"/>
+                <task id="140" name="4.9) Waiting Room" color="#8cb6ce" meeting="false" start="2016-10-07" duration="1" complete="0" expand="true"/>
+                <task id="141" name="4.10) Ideas for Solutions" color="#8cb6ce" meeting="false" start="2016-10-07" duration="1" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="61" name="6) Proof of Concept Demonstration" color="#ccccff" meeting="false" start="2016-10-17" duration="5" complete="0" expand="true"/>
+        <task id="63" name="7) Design Document- Revision 0" color="#006666" meeting="true" start="2016-11-11" duration="0" complete="0" expand="true"/>
+        <task id="65" name="8) Demonstration- Revision 0" color="#999900" meeting="false" start="2016-11-14" duration="5" complete="0" expand="true"/>
+        <task id="67" name="9) Final Demonstration- Revision 1" color="#666666" meeting="false" start="2016-11-28" duration="5" complete="0" expand="true"/>
+        <task id="69" name="10) Peer Evaluation of Other Teams' Demonstration" color="#33ffcc" meeting="false" start="2016-11-28" duration="5" complete="0" expand="true"/>
+        <task id="71" name="11) Final Documentation" color="#ffffcc" meeting="true" start="2016-12-07" duration="0" complete="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="3" name="Kareem Abdel Mesih" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="4" name="John-Paul Dakran" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="5" name="Shady Nessim" function="SoftwareDevelopment:2" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="0" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="18" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="44" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="53" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="95" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="96" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="97" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="99" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="59" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="61" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="63" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="25.0"/>
+        <allocation task-id="65" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="67" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="69" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="71" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="18" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="44" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="53" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="98" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="99" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="91" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="25.0"/>
+        <allocation task-id="59" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="63" resource-id="4" function="SoftwareDevelopment:2" responsible="false" load="25.0"/>
+        <allocation task-id="65" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="67" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="69" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="71" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="18" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="44" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="53" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="99" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="91" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="25.0"/>
+        <allocation task-id="59" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="61" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="63" resource-id="5" function="SoftwareDevelopment:2" responsible="false" load="25.0"/>
+        <allocation task-id="65" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="67" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="69" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="71" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

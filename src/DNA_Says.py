@@ -62,28 +62,19 @@ def main():
     infoRect = infoSurf.get_rect()
     infoRect.topleft = (50, 220)
 
-    #Store piano notes
-    A3  = pygame.mixer.Sound('A3.ogg')
-    Bb3 = pygame.mixer.Sound('Bb3.ogg')
+    #Store required piano notes
     B3  = pygame.mixer.Sound('B3.ogg')
     C4  = pygame.mixer.Sound('C4.ogg')
-    Db4 = pygame.mixer.Sound('Db4.ogg')
     D4  = pygame.mixer.Sound('D4.ogg')
-    Eb4 = pygame.mixer.Sound('Eb4.ogg')
     E4  = pygame.mixer.Sound('E4.ogg')
     F4  = pygame.mixer.Sound('F4.ogg')
-    Gb4 = pygame.mixer.Sound('Gb4.ogg')
-    G4  = pygame.mixer.Sound('G4.ogg')
     Ab4 = pygame.mixer.Sound('Ab4.ogg')
     A4  = pygame.mixer.Sound('A4.ogg')
-    Bb4 = pygame.mixer.Sound('Bb4.ogg')
     B4  = pygame.mixer.Sound('B4.ogg')
     C5  = pygame.mixer.Sound('C5.ogg')
-    Db5 = pygame.mixer.Sound('Db5.ogg')
-    D5  = pygame.mixer.Sound('D5.ogg')
 
     #Initializing variables required for a new game
-    song            = [keyAb4, keyE4, keyE4, keyC5, keyC5, keyE4, keyE4, keyC5, keyC5, keyE4, keyF4, keyE4, keyD4, keyD4, keyD4, keyB4, keyB4, keyD4, keyD4, keyB4, keyB4, keyD4, keyE4, keyD4, keyC4, keyC4, keyC4, keyA4, keyA4, keyC4, keyC4, keyA4, keyA4, keyC4, keyD4, keyC4, keyB3, keyB3, keyB3, keyAb4, keyAb4, keyA4, keyB4, keyF4]
+    song            = [keyC5, keyE4, keyE4, keyC5, keyC5, keyE4, keyE4, keyC5, keyC5, keyE4, keyF4, keyE4, keyD4, keyD4, keyD4, keyB4, keyB4, keyD4, keyD4, keyB4, keyB4, keyD4, keyE4, keyD4, keyC4, keyC4, keyC4, keyA4, keyA4, keyC4, keyC4, keyA4, keyA4, keyC4, keyD4, keyC4, keyB3, keyB3, keyB3, keyAb4, keyAb4, keyA4, keyB4, keyF4]
     pattern         = []
     currentStep     = 0     #the next note to be repeated
     noteIndex       = 0     #indexes the notes in the song array
@@ -93,7 +84,7 @@ def main():
 
     #Main loop
     while True:
-        clickedButton = None
+        clickedKey = None
         displaySurf.fill(bgColor)
         drawKeys()
 
@@ -108,7 +99,7 @@ def main():
         for event in pygame.event.get():
             if event.type == MOUSEBUTTONUP:
                 mousex, mousey = event.pos
-                clickedButton  = getKeyClicked(mousex, mousey)
+                clickedKey  = getKeyClicked(mousex, mousey)
 
         if not waitingForInput:
             #play the next note
@@ -123,9 +114,9 @@ def main():
             waitingForInput = True
         else:
             #wait for the player input
-            if clickedButton and clickedButton == pattern[currentStep]:
+            if clickedKey and clickedKey == pattern[currentStep]:
                 #played the correct note
-                flashKeyAnimation(clickedButton)
+                flashKeyAnimation(clickedKey)
                 currentStep  += 1
                 lastClickTime = time.time()
 
@@ -136,7 +127,7 @@ def main():
                     waitingForInput = False
                     currentStep     = 0
 
-            elif (clickedButton and clickedButton != pattern[currentStep]) or (currentStep != 0 and time.time() - timeout > lastClickTime):
+            elif (clickedKey and clickedKey != pattern[currentStep]) or (currentStep != 0 and time.time() - timeout > lastClickTime):
                 #played incorrect note or timed out
                 gameOverAnimation()
                 pattern         = []
@@ -159,113 +150,30 @@ def checkForQuit():
 
 #Plays the appropriate sound and flashes the correct key
 def flashKeyAnimation(key, animationSpeed=50):
-    if key   == keyA3:
-        sound = A3
-        flashColor = brightRed
-        rectangle  = keyA3
+    if   key == keyB3:  sound = B3 
+    elif key == keyC4:  sound = C4
+    elif key == keyD4:  sound = D4
+    elif key == keyE4:  sound = E4
+    elif key == keyF4:  sound = F4
+    elif key == keyAb4: sound = Ab4
+    elif key == keyA4:  sound = A4
+    elif key == keyB4:  sound = B4
+    else:               sound = C5
 
-    elif key == keyBb3:
-        sound = Bb3
-        flashColor = brightRed
-        rectangle  = keyBb3
-
-    elif key == keyB3:
-        sound = B3
-        flashColor = brightRed
-        rectangle  = keyB3
-        
-    elif key == keyC4:
-        sound = C4
-        flashColor = brightRed
-        rectangle  = keyC4
-
-    elif key == keyDb4:
-        sound = Db4
-        flashColor = brightRed
-        rectangle  = keyDb4
-
-    elif key == keyD4:
-        sound = D4
-        flashColor = brightRed
-        rectangle  = keyD4
-
-    elif key == keyEb4:
-        sound = Eb4
-        flashColor = brightRed
-        rectangle  = keyEb4
-
-    elif key == keyE4:
-        sound = E4
-        flashColor = brightRed
-        rectangle  = keyE4
-
-    elif key == keyF4:
-        sound = F4
-        flashColor = brightRed
-        rectangle  = keyF4
-
-    elif key == keyGb4:
-        sound = Gb4
-        flashColor = brightRed
-        rectangle  = keyGb4
-
-    elif key == keyG4:
-        sound = G4
-        flashColor = brightRed
-        rectangle  = keyG4
-
-    elif key == keyAb4:
-        sound = Ab4
-        flashColor = brightRed
-        rectangle  = keyAb4
-
-    elif key == keyA4:
-        sound = A4
-        flashColor = brightRed
-        rectangle  = keyA4
-
-    elif key == keyBb4:
-        sound = Bb4
-        flashColor = brightRed
-        rectangle  = keyBb4
-
-    elif key == keyB4:
-        sound = B4
-        flashColor = brightRed
-        rectangle  = keyB4
-
-    elif key == keyC5:
-        sound = C5
-        flashColor = brightRed
-        rectangle  = keyC5
-
-    elif key == keyDb5:
-        sound = Db5
-        flashColor = brightRed
-        rectangle  = keyDb5
-
-    elif key == keyD5:
-        sound = D5
-        flashColor = brightRed
-        rectangle  = keyD5
-
-    origSurf  = displaySurf.copy()
-    if key != keyAb4:
-        flashSurf = pygame.Surface((whiteWidth, 60))
-    else:
-        flashSurf = pygame.Surface((blackWidth, 36))
+    origSurf   = displaySurf.copy()
+    if key != keyAb4: flashSurf = pygame.Surface((whiteWidth, 60))
+    else:             flashSurf = pygame.Surface((blackWidth, 36))
     flashSurf = flashSurf.convert_alpha()
     r, g, b   = brightRed
     sound.play()
+    
     for start, end, step in ((0, 255, 1), (255, 0, -1)):
         for alpha in range(start, end, animationSpeed * step):
             checkForQuit()
             displaySurf.blit(origSurf, (0, 0))
             flashSurf.fill((r, g, b, alpha))
-            if key != keyAb4:
-                displaySurf.blit(flashSurf, (rectangle.x, rectangle.y+90))
-            else:
-                displaySurf.blit(flashSurf, (rectangle.x, rectangle.y+54))
+            if key != keyAb4: displaySurf.blit(flashSurf, (key.x, key.y+90))
+            else:             displaySurf.blit(flashSurf, (key.x, key.y+54))
             pygame.display.update()
             fpsClock.tick(fps)
     displaySurf.blit(origSurf, (0, 0))
@@ -300,19 +208,16 @@ def drawKeys():
 def changeBackgroundAnimation(animationSpeed=40):
     global bgColor
     newBgColor = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
-
     newBgSurf = pygame.Surface((winWidth, winHeight))
     newBgSurf = newBgSurf.convert_alpha()
     r, g, b = newBgColor
+    
     for alpha in range(0, 255, animationSpeed):
         checkForQuit()
         displaySurf.fill(bgColor)
-
         newBgSurf.fill((r, g, b, alpha))
         displaySurf.blit(newBgSurf, (0, 0))
-
         drawKeys() #redraw the keys on top of the tint
-
         pygame.display.update()
         fpsClock.tick(fps)
     bgColor = newBgColor
@@ -345,63 +250,17 @@ def gameOverAnimation(color=white, animationSpeed=50):
 
 #Returns the key that the player last clicked
 def getKeyClicked(x, y):
-    
-    if   keyA3.collidepoint((x, y)):
-        return keyA3
-    
-    elif keyBb3.collidepoint((x, y)):
-        return keyBb3
-
-    elif keyB3.collidepoint((x, y)):
-        return keyB3
-
-    elif keyC4.collidepoint((x, y)):
-        return keyC4
-
-    elif keyDb4.collidepoint((x, y)):
-        return keyDb4
-
-    elif keyD4.collidepoint((x, y)):
-        return keyD4
-
-    elif keyEb4.collidepoint((x, y)):
-        return keyEb4
-
-    elif keyE4.collidepoint((x, y)):
-        return keyE4
-
-    elif keyF4.collidepoint((x, y)):
-        return keyF4
-
-    elif keyGb4.collidepoint((x, y)):
-        return keyGb4
-
-    elif keyG4.collidepoint((x, y)):
-        return keyG4
-
-    elif keyAb4.collidepoint((x, y)):
-        return keyAb4
-
-    elif keyA4.collidepoint((x, y)):
-        return keyA4
-
-    elif keyBb4.collidepoint((x, y)):
-        return keyBb4
-
-    elif keyB4.collidepoint((x, y)):
-        return keyB4
-
-    elif keyC5.collidepoint((x, y)):
-        return keyC5
-
-    elif keyDb5.collidepoint((x, y)):
-        return keyDb5
-
-    elif keyD5.collidepoint((x, y)):
-        return keyD5
-    
+    if   keyB3.collidepoint ((x, y)): return keyB3
+    elif keyC4.collidepoint ((x, y)): return keyC4
+    elif keyD4.collidepoint ((x, y)): return keyD4
+    elif keyE4.collidepoint ((x, y)): return keyE4
+    elif keyF4.collidepoint ((x, y)): return keyF4
+    elif keyAb4.collidepoint((x, y)): return keyAb4
+    elif keyA4.collidepoint ((x, y)): return keyA4
+    elif keyB4.collidepoint ((x, y)): return keyB4
+    elif keyC5.collidepoint ((x, y)): return keyC5
+    else:                             return keyDb5
     return None
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == '__main__': main()

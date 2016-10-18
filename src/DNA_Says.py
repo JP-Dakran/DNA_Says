@@ -92,14 +92,13 @@ def main():
         scoreRect = scoreSurf.get_rect()
         scoreRect.topleft = (570, 15)
         displaySurf.blit(scoreSurf, scoreRect)
-
         displaySurf.blit(infoSurf, infoRect)
         checkForQuit()
         
         for event in pygame.event.get():
             if event.type == MOUSEBUTTONUP:
                 mousex, mousey = event.pos
-                clickedKey  = getKeyClicked(mousex, mousey)
+                clickedKey     = getKeyClicked(mousex, mousey)
 
         if not waitingForInput:
             #play the next note
@@ -112,6 +111,7 @@ def main():
                 flashKeyAnimation(key)
                 pygame.time.wait(delay)
             waitingForInput = True
+            
         else:
             #wait for the player input
             if clickedKey and clickedKey == pattern[currentStep]:
@@ -241,7 +241,7 @@ def gameOverAnimation(color=white, animationSpeed=50):
             for alpha in range(start, end, animationSpeed * step):
                 checkForQuit()
                 flashSurf.fill((r, g, b, alpha))
-                displaySurf.blit(origSurf, (0, 0))
+                displaySurf.blit(origSurf,  (0, 0))
                 displaySurf.blit(flashSurf, (0, 0))
                 drawKeys()
                 pygame.display.update()

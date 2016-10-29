@@ -97,11 +97,13 @@ See Gantt Chart at the following url ...
 \section{System Test Description}
 	
 \subsection{Tests for Functional Requirements}
-\subsubsection{Area of Testing1}
+
+\subsubsection{User Input}
 		
 \paragraph{Title for Test}
 \begin{enumerate}
-\item{test-id1\\}
+
+\item{F-UI-1\\}
 Type: Functional, Dynamic, Manual, Static etc.
 					
 Initial State: 
@@ -112,7 +114,7 @@ Output:
 					
 How test will be performed: 
 					
-\item{test-id2\\}
+\item{F-UI-2\\}
 Type: Functional, Dynamic, Manual, Static etc.
 					
 Initial State: 
@@ -123,8 +125,17 @@ Output:
 					
 How test will be performed: 
 \end{enumerate}
-\subsubsection{Area of Testing2}
+\subsubsection{Navigation}
 ...
+
+\subsubsection{Display}
+
+\subsubsection{Functionality}
+
+\subsubsection{Constraints}
+
+
+
 \subsection{Tests for Nonfunctional Requirements}
 \subsubsection{Area of Testing1}
 		
@@ -185,6 +196,17 @@ How test will be performed:
 ...
 	
 \section{Comparison to Existing Implementation}	
+
+\par The implementation of DNA Says and Simon Says have many similarities and differences that will be outlined in this section. The main principle of the game stays constant however there are many improvements and modifications that have been added to truly make DNA Says unique. 
+\\
+\par The first significant difference between DNA Says and Simon Says is the fact that DNA Says has three modes. The original version of Simon Says only has one mode or one level which consists of 4 buttons that display the pattern to the user. In contrast DNA Says has three levels or three modes - each with a different implementation but overall the same theory from the Simon Says implementation. The first mode - Kareem Says, consists of piano keys that will display the pattern to the user. The second mode - Shady Says, consists of 4 different coloured buttons that will display the pattern to the user. The final mode - JP Says, consists of 9 different coloured buttons that will display the pattern to the user. 
+\\
+\par The second critical difference between the two implementations is the 4 second timeout. The original implementation - Simon Says, has no timeout. This means when the user clicks a button and does not click the next button, the program will wait for the user to enter the next button. In contrast, DNAY Says has a 4 second timeout that is implemented. When a user clicks a button/key and does not click the next button within 4 seconds, the player loses.
+\\
+\par The third significant difference between DNA Says and Simon Says is the protocol the program displays to the user when an incorrect button/key is inputted. The original version - Simon Says - displays the correct button that should have been clicked along with a sound that indicates an incorrect key has been inputted. The implementation of DNA Says makes the entire screen flash white 3 times and outputs a harmonic combination of notes that indicate an incorrect input. 
+\\
+\par Along with all the differences that truly make the game DNA Says truly unique, there are numerous similarities as the essence of the game is the same. Both implementations of the game have a main menu that allow the user to enter a mode and play the game. During a game, there is a score icon which displays the current score and there is also an exit button which will allow the user to return to the main menu.  
+
 				
 \section{Unit Testing Plan}
 		

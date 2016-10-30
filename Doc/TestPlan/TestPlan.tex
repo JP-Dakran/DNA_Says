@@ -34,6 +34,7 @@
 \midrule
 2016/10/25 & 1.0 & Addition of General Information section \\
 2016/10/29 & 1.1 & Addition of Comparison to Existing Implementation section\\
+2016/10/30 & 1.2 & Addition of Tests for Proof of Concept\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -345,7 +346,95 @@ See Gantt Chart at the following url ...
 
 \section{Tests for Proof of Concept}
 
+\subsection{User Input}
+		
+\begin{itemize}
 
+\item \textbf{Test \#1: Opening the DNA Says application}
+\begin{itemize}
+\item Test ID: POC-UI-1
+\item Type: Functional, Dynamic, Manual		
+\item Initial State: Desktop will be open. 					
+\item Input: Mouse click on DNA Says application icon. 					
+\item Output: New window labelled DNA Says opens.					
+\item Execution: The tester will open the application on a CPU. 
+\end{itemize}
+
+\item \textbf{Test \#2: Clicking a correct key}
+\begin{itemize}
+\item Test ID: POC-UI-2 
+\item Type: Dynamic, Automated		
+\item Initial State: Kareem Says mode will be open. 					
+\item Input: Mouse click on a key that is part of the pattern given by the computer.					
+\item Output: Key will light up and make a sound. 					
+\item Execution: The tester will click on a correct key and observe the behaviour of the game.
+\end{itemize}
+
+\item \textbf{Test \#3: Clicking an incorrect key}
+\begin{itemize}
+\item Test ID: POC-UI-2 
+\item Type: Dynamic, Automated		
+\item Initial State: Kareem Says mode will be open.					
+\item Input: Mouse click on a key that is not part of the pattern given by the computer. 					
+\item Output: Screen will flash white three times and a sound will be outputted indicating incorrect key. 					
+\item Execution: The tester will click on an incorrect key and observe the behaviour of the game.
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Display}
+
+\begin{itemize}
+
+\item \textbf{Test \#4: Viewing mode - "Kareem Says"}
+\begin{itemize}
+\item Test ID: POC-D-1
+\item Type: Functional, Dynamic, Manual 		
+\item Initial State: Desktop will be open. 					
+\item Input: Mouse click on the DNA Says application icon.			
+\item Output: Kareem Says mode will open displaying a piano.		
+\item Execution: The tester will open the application on a CPU. 
+\end{itemize}
+
+\item \textbf{Test \#5: Failure signal}
+\begin{itemize}
+\item Test ID: POC-D-2
+\item Type: Functional, Dynamic, Manual		
+\item Initial State: Kareem Says mode will be open.					
+\item Input: Mouse click on an incorrect key.					
+\item Output: The screen will flash white three times and a sound indicating incorrect key will be outputted.  					
+\item Execution: The tester will click on an incorrect key.  
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Functionality}
+
+\begin{itemize}
+
+\item \textbf{Test \#6: Correct score increment}
+\begin{itemize}
+\item Test ID: POC-FUNC-1
+\item Type: Functional, Dynamic, Automated  		
+\item Initial State: Kareem Says mode will be open. 					
+\item Input: Mouse click on a correct key.  					
+\item Output: The key will light up and a sound will be outputted. The score increment will be incremented by one.				
+\item Execution: The tester will click on a correct key and view the score icon.  
+\end{itemize}
+
+\item \textbf{Test \#7: Correct pattern increment}
+\begin{itemize}
+\item Test ID: POC-FUNC-1
+\item Type: Functional, Dynamic, Automated		
+\item Initial State: Kareem Says mode will be open.					
+\item Input: Mouse click on correct keys that make up the pattern. 		
+\item Output: Each key will light up and produce its sound. At each level, one additional key will be appended to the pattern. 			
+\item Execution: The tester will play the game and observe that one additional key is added to the pattern at each level.
+\end{itemize}
+
+
+
+\end{itemize}
 
 	
 \section{Comparison to Existing Implementation}	

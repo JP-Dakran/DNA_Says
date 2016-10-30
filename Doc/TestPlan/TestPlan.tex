@@ -114,35 +114,166 @@ See Gantt Chart at the following url ...
 		
 \begin{itemize}
 
-\item \textbf{Test \#1: REQ}
+\item \textbf{Test \#1: The user will be able to open the executable file.}
 \begin{itemize}
 \item Test ID: FT-UI-1
-\item Type: Functional, Dynamic, Manual, Static etc.				
-\item Initial State: 					
-\item Input: 					
-\item Output: 					
-\item Execution (How test will be performed): 
+\item \textbf{Type: Functional, Dynamic, Manual, Static etc.}				
+\item Initial State: Desktop will be open. 					
+\item Input: Mouse click on DNA Says application icon. 					
+\item Output: DNA Says main menu will appear. 					
+\item Execution (How test will be performed): The tester will open the application on a CPU.
 \end{itemize}
 					
-\item \textbf{Test \#2: REQ}
+\item \textbf{Test \#2 The user will be able to select one of the three modes to play:} 
 \begin{itemize}
 \item Test ID: FT-UI-2
-\item Type: Functional, Dynamic, Manual, Static etc.				
-\item Initial State: 					
-\item Input: 					
-\item Output: 					
-\item Execution (How test will be performed): 
+\item Type: 		
+\item Initial State: Main menu will be open. 					
+\item Input: Mouse click on a desire mode. 					
+\item Output: Redirection to that modes user interface.					
+\item Execution: The tester will attempt to open each of the three modes via the main menu.
 \end{itemize}
 
 
 \end{itemize}
 
 \subsubsection{Navigation}
-...
+
+\begin{itemize}
+
+\item \textbf{Test \#: The user will be able to exit the game at any time and go back to the main menu.}
+\begin{itemize}
+\item Test ID: FT-NAV-1
+\item Type: 		
+\item Initial State: One of the three modes will be open.					
+\item Input: Mouse click on "Main Menu" icon.					
+\item Output: User will be redirected to the main menu.					
+\item Execution: The tester will play one of the modes and attempt to go back to the main menu via the "Main Menu" icon.
+\end{itemize}
+
+\end{itemize}
 
 \subsubsection{Display}
 
+\begin{itemize}
+
+\item \textbf{Test \#: The game interface will open in a new window.}
+\begin{itemize}
+\item Test ID: FT-D-1
+\item Type: 		
+\item Initial State: Desktop will be open. 				
+\item Input: Mouse click on DNA Says application icon. 					
+\item Output: A new window labelled DNA Says will open and the main menu will appear.  					
+\item Execution: The tester will open the application on a CPU.
+\end{itemize}
+
+\item \textbf{Test \#: The main menu will display the three different modes.}
+\begin{itemize}
+\item Test ID: FT-D-2
+\item Type: 		
+\item Initial State: Desktop will be open.					
+\item Input: Mouse click on DNA Says application.					
+\item Output: Main menu will open. 					
+\item Execution: The tester will check if the three modes are available via the main menu.
+\end{itemize}
+
+\item \textbf{Test \#: Four different coloured disks will be shown to the user during Shady Says.}
+\begin{itemize}
+\item Test ID: FT-D-3
+\item Type: 		
+\item Initial State: Main menu will be open.					
+\item Input: Mouse click on Shady Says mode.					
+\item Output: Shady Says mode will open and display the user interface.					
+\item Execution: The tester will open the mode - Shady Says - and check if there are four different coloured disks displayed.
+\end{itemize}
+
+\item \textbf{Test \#: Each disk/key will light up and produce a different sound when clicked.}
+\begin{itemize}
+\item Test ID: FT-D-4
+\item Type: 		
+\item Initial State: One of the three modes will be open, and one of the disks/keys will light up and produce a sound.			
+\item Input: Mouse click on the specific disk that lit up. 					
+\item Output: The specific disk/key will light up and produce a sound.					
+\item Execution: The tester will play the game and click one of the correct disks/keys with respect to the pattern and observe the behaviour.
+\end{itemize}
+
+\item \textbf{Test \#: There will be a score icon in the bottom right corner.}
+\begin{itemize}
+\item Test ID: FT-D-5
+\item Type: 		
+\item Initial State: One of the three modes will be open. 					
+\item Input: No input.					
+\item Output: No output. 					
+\item Execution: The user will enter one of the three modes and verify that there is a score icon in the bottom right corner.  
+\end{itemize}
+
+\end{itemize}
+
 \subsubsection{Functionality}
+
+\begin{itemize}
+
+\item \textbf{Test \#: The game will have 3 separate modes - Kareem Says, JP Says, and Shady Says }
+\begin{itemize}
+\item Test ID: FT-FUNC-1
+\item Type: 		
+\item Initial State: Desktop will be open.					
+\item Input: Mouse click on DNA Says application	
+\item Output: Main menu will open.					
+\item Execution: The tester will check if the 3 modes are available via the main menu.
+\end{itemize}
+
+\item \textbf{Test \#: Every time a user passes a level, the score goes up by one point.}
+\begin{itemize}
+\item Test ID: FT-FUNC-2
+\item Type: 		
+\item Initial State: One of the three modes will be open.					
+\item Input: Mouse click on the pattern that the computer has displayed to the user.					
+\item Output: The score icon will increase by 1 point. 					
+\item Execution: The tester will play the game, they will attempt to produce the pattern and observe the score.
+\end{itemize}
+
+\item \textbf{Test \#: Every time a user fails a level, the score is reset to zero.}
+\begin{itemize}
+\item Test ID: FT-FUNC-3
+\item Type: 		
+\item Initial State: One of the three modes will be open.					
+\item Input: Mouse click on the incorrect pattern.					
+\item Output: The score will be reset to zero and the screen will flash three times. 					
+\item Execution: The tester will play the game, they will input the incorrect pattern and observe the score.
+\end{itemize}
+
+\item \textbf{Test \#: At level N, a random pattern of N disks will light up and be displayed to the user. }
+\begin{itemize}
+\item Test ID: FT-FUNC-4
+\item Type: 		
+\item Initial State: One of the three modes will be open. 					
+\item Input: No input				
+\item Output: One disk/key will light up and produce a sound.		
+\item Execution: The user will attempt level one, and verify that one key/disk lights up. They can also do this for further levels. 
+\end{itemize}
+
+\item \textbf{Test \#: The user cannot click the disks while the pattern is being displayed.}
+\begin{itemize}
+\item Test ID: FT-FUNC-5
+\item Type: 		
+\item Initial State: Level one of a mode will be open.					
+\item Input: Mouse click on a key/disk. 					
+\item Output: No output. 					
+\item Execution: The tester will attempt to click a key/disk while the computer is displaying the pattern and observe the behaviour of the program.
+\end{itemize}
+
+\item \textbf{Test \#: The user will be able to click the disks once the pattern has been displayed.}
+\begin{itemize}
+\item Test ID: FT-FUNC-6
+\item Type: 		
+\item Initial State: Level one of a mode will be open.					
+\item Input: Mouse click on a key/disk.					
+\item Output: Correct key/disk click - Key/disk will light up and produce a sound. Incorrect key/disk - Screen will flash threee times. 					
+\item Execution: After the pattern has been displayed, the tester will click the correct disk and verify that it can be clicked. The tester will also click an incorrect disk and verify that it can also be clicked.
+\end{itemize}
+
+\end{itemize}
 
 \subsubsection{Constraints}
 

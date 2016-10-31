@@ -134,8 +134,9 @@ unittest & Unit Testing Framework & Unit Testing \\
 \end{table}
 
 \subsection{Testing Schedule}
-		
-See Gantt Chart at the following url ...
+
+See Gantt Chart at the following url:
+
 \section{System Test Description}
 	
 \subsection{Tests for Functional Requirements}
@@ -659,17 +660,26 @@ A set of unit tests will be performed on functions used inthe implementation of 
 		
 \subsection{Unit testing of output files}	
 The application does not generate any output files. The output for this application is the patterns played by the system	as well as the error flashing in response to wrong pattern input. Test covergae for these outputs is covered in the above unit testing area.
-		
-\bibliographystyle{plainnat}
-\bibliography{SRS}
 
 
 \newpage
 \section{Appendix}
-This is where you can place additional information.
 \subsection{Symbolic Parameters}
-The definition of the test cases will call for SYMBOLIC\_CONSTANTS.
-Their values are defined in this section for easy maintenance.
+\begin{table}[h]
+\caption{\bf Symbolic Parameters}
+\begin{tabularx}{\textwidth}{p{6cm}X}
+\toprule {\bf Parameter} & {\bf Description}\\
+\midrule
+key & Buttons are represented by keys in the code, each button has its own key.\\
+checkForQuit & Function to check if Quit button has been pressed.\\
+flashKeyAnimation & Function to produce the flashing animation for a select key passed to it as a parameter.\\
+changeBackgroundAnimation & Function to change background color smoothly.\\
+gameOverAnimation & Function that causes the background to flash three times along with a chord played. This happens when user enters wrong pattern.\\
+getKeyClicked & Function to check coordinates of mouse click and map it to corresponding button.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \subsection{Usability Survey Questions}
 Sample Survey to be handed out to test users:
 \begin{mdframed}[linewidth=1pt]

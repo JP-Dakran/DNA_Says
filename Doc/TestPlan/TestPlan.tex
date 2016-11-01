@@ -28,19 +28,20 @@
 \pagenumbering{roman}
 \tableofcontents
 \listoftables
-\listoffigures
+
 \begin{table}[h]
 \caption{\bf Revision History}
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-2016/10/25 & 1.0 & Addition of General Information section \\
-2016/10/29 & 1.1 & Addition of Comparison to Existing Implementation section\\
+2016/10/25 & 1.0 & Addition of General Information \\
+2016/10/29 & 1.1 & Addition of Comparison to Existing Implementation\\
 2016/10/30 & 1.2 & Addition of Tests for Proof of Concept\\
 2016/10/30 & 1.3 & Addition of Tests for Functional Requirements\\
 2016/10/30 & 1.4 & Addition of Tests for Non-Functional Requirements\\
 2016/10/31 & 1.5 & Addition of Unit Tests\\
 2016/10/31 & 1.6 & Addition of Appendix\\
+2016/10/31 & 2.0 & Final Revision\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -51,12 +52,12 @@
 
 \par In the engineering process, verification and validation of the requirements outlined in the Software Requirements Specification (SRS) document is essential. This process is executed through a series of tests executed on the requirements to prove that the functionality of the game is correct. This document serves the purpose of outlining how the requirements will be validated and verified.
 \\
-\par The implementation of the game DNA Says consists of numerous functional capabilities. These functional capabilities range from detecting user input to outputting a correct sound at a precise given time. The complete set of requirements will be broken down into specific and simple tests to prove the functionality of each specific requirement. 
+\par The implementation of the game DNA Says consists of numerous functional capabilities. These functional capabilities range from detecting user input to outputting a correct sound at a precise given time. The complete set of requirements will be split into specific and simple tests to prove the functionality of each specific requirement. 
 
 
 \subsection{Scope}
 
-\par The main objective of this document is to outline an agreed upon set of tests that will be performed on the software system to validate its functionality. The scope of the testing for this game includes testing the animations, sounds, buttons, integration of the system, and all functional and non-functional requirements outline in the Software Requirements Specification (SRS) document.
+\par The main objective of this document is to outline an agreed upon set of tests that will be performed on the software system to validate its functionality. The scope of the testing for this game includes testing the animations, sounds, buttons, integration of the system, and all functional and non-functional requirements outlined in the Software Requirements Specification (SRS) document.
 
 
 \subsection{Acronyms, Abbreviations, and Symbols}
@@ -67,7 +68,7 @@
 \toprule
 \textbf{Abbreviation} & \textbf{Definition} \\
 \midrule
-SRS & Software Requirement Specification\\
+SRS & Software Requirements Specification\\
 PoC & Proof of Concept\\
 GUI & Graphical User Interface\\
 CPU & Central Processing Unit\\
@@ -86,23 +87,23 @@ USB & Universal Serial Bus\\
 \textbf{Term} & \textbf{Definition}\\
 \midrule
 Mode & Different subsections of the game\\
-Gantt Chart & Chart outlining the timeline of the project.\\
-Functional  & Focused on results not with how those results are achieved. \\
-Structural & Focused on testing the actual processes - how results are achjeived.\\
-Dynamic  & Test cases are run and checked against expected behaviour. \\
-Static & Testing syntax and requirements.\\
-Automated  & Testing done automatically via the computer.\\ 
-Manual  & Testing done manually via a human user. \\
-Windows & An operating system.\\
-Linux & An operating system.\\
-Mac OS X & An operating system.\\
+Gantt Chart & Chart outlining the timeline of the project\\
+Functional  & Focused on the results excluding how they are achieved \\
+Structural & Focused on testing the actual processes - how results are achieved\\
+Dynamic  & Test cases are run and checked against expected behaviour\\
+Static & Testing syntax and requirements\\
+Automated  & Testing done automatically via the computer\\ 
+Manual  & Testing done manually via a human user.\\
+Windows & An operating system\\
+Linux & An operating system\\
+Mac OS X & An operating system\\
 
 \bottomrule
 \end{tabularx}
 \end{table}	
 \subsection{Overview of Document}
 
-\par This document outlines a collection of information about the software system - DNA Says - that is in the process of creation. The test plan document begins by describing the software system and its functionality. It then proceeds to introducing the reader with the test team and the plan for testing - I.e. Testing tools and the testing schedule.
+\par This document outlines a collection of information about the software system "DNA Says" that is in the process of creation. This test plan document begins by describing the software system and its functionality. It then proceeds with introducing the reader with the test team and the plan for testing- testing tools and the testing schedule.
 \\
 \par Next, the tests for functional and non-functional requirements will be described. Each test will have a type, initial state, input, output, and description of how the test will be performed. The same format will be used for the next section which outlines the tests for the proof of concept.
 \\
@@ -110,9 +111,9 @@ Mac OS X & An operating system.\\
 
 
 \section{Plan}
-\par This section provides information about the plan for testing. It includes description of software, testing members as well as other details on tools and automation for testing. Provided at the end is a link to testing schedule on the Gantt chart.
+\par This section provides information about the plan for testing. It includes descriptions of software, testing members as well as other details on tools and automation for testing. Provided at the end is a link to testing schedule on the Gantt chart.
 \subsection{Software Description}
-This software is a game adapted from the popular game Simon Says. Three modes are provided, each with a different style of pattern matching, user shall observe visual/audio pattern  and reproduce the pattern, then the pattern will be extended and so on.
+This software is a game adapted from the popular game Simon Says. Three modes are provided, each with a different style of pattern matching, user shall observe a given visual/audio pattern  and reproduce the same pattern, then the pattern will be extended and the game continues in that manner.
 \subsection{Test Team}
 The test team consists of:
 \begin{itemize}
@@ -126,6 +127,7 @@ Family and friends will also be involved in the testing process through user sur
 Automated testing will be used to test the basic functionality of the system. A random button will be pressed to examine the system's response to correct/incorrect input. Unit testing will also be applied to test functions and methods.
 
 \subsection{Testing Tools}
+.
 \begin{table}[h]
 \caption{\bf Testing Tools}
 \begin{tabularx}{\textwidth}{p{3cm}p{6cm}X}
@@ -154,7 +156,7 @@ See Gantt Chart at the following url:
 \item Type: Functional, Dynamic, Manual		
 \item Initial State: Desktop will be open. 					
 \item Input: Mouse click on DNA Says application icon. 					
-\item Output: DNA Says main menu will appear. 					
+\item Output: DNA Says's main menu will appear. 					
 \item Execution: The tester will open the application on a CPU.
 \end{itemize}
 					
@@ -163,7 +165,7 @@ See Gantt Chart at the following url:
 \item Test ID: FT-UI-2
 \item Type: Functional, Dynamic, Manual 		
 \item Initial State: Main menu will be open. 					
-\item Input: Mouse click on a desire mode. 					
+\item Input: Mouse click on a desired mode. 					
 \item Output: Redirection to that modes user interface.					
 \item Execution: The tester will attempt to open each of the three modes via the main menu.
 \end{itemize}
@@ -175,7 +177,7 @@ See Gantt Chart at the following url:
 
 \begin{itemize}
 
-\item \textbf{Test \#3: The user will be able to exit the game at any time and go back to the main menu.}
+\item \textbf{Test \#3: The user will be able to stop the game at any time and go back to the main menu.}
 \begin{itemize}
 \item Test ID: FT-NAV-1
 \item Type: Functional, Dynamic, Manual 		
@@ -211,34 +213,34 @@ See Gantt Chart at the following url:
 \item Execution: The tester will check if the three modes are available via the main menu.
 \end{itemize}
 
-\item \textbf{Test \#:6 Four different coloured disks will be shown to the user during Shady Says.}
+\item \textbf{Test \#:6 Four different coloured buttons will be shown to the user during Shady Says.}
 \begin{itemize}
 \item Test ID: FT-D-3
 \item Type: Functional, Dynamic, Manual		
 \item Initial State: Main menu will be open.					
 \item Input: Mouse click on Shady Says mode.					
 \item Output: Shady Says mode will open and display the user interface.					
-\item Execution: The tester will open the mode - Shady Says - and check if there are four different coloured disks displayed.
+\item Execution: The tester will open the mode "Shady Says" and check if there are four different coloured buttons displayed.
 \end{itemize}
 
-\item \textbf{Test \#7: Each disk/key will light up and produce a different sound when clicked.}
+\item \textbf{Test \#7: Each button will light up and produce a different sound when clicked.}
 \begin{itemize}
 \item Test ID: FT-D-4
 \item Type: Functional, Dynamic, Manual 		
-\item Initial State: One of the three modes will be open, and one of the disks/keys will light up and produce a sound.			
-\item Input: Mouse click on the specific disk that lit up. 					
-\item Output: The specific disk/key will light up and produce a sound.					
-\item Execution: The tester will play the game and click one of the correct disks/keys with respect to the pattern and observe the behaviour.
+\item Initial State: One of the three modes will be open, and one of the buttons will light up and produce a sound.			
+\item Input: Mouse click on the specific button that lit up. 					
+\item Output: The specific button will light up and produce a sound.					
+\item Execution: The tester will play the game and click one of the correct button with respect to the pattern and observe the behaviour.
 \end{itemize}
 
-\item \textbf{Test \#8: There will be a score icon in the bottom right corner.}
+\item \textbf{Test \#8: There will be a score box at the top right corner.}
 \begin{itemize}
 \item Test ID: FT-D-5
 \item Type: Functional, Dynamic, Manual 		
 \item Initial State: One of the three modes will be open. 					
 \item Input: No input.					
 \item Output: No output. 					
-\item Execution: The user will enter one of the three modes and verify that there is a score icon in the bottom right corner.  
+\item Execution: The user will enter one of the three modes and verify that there is a score icon at the top right corner.  
 \end{itemize}
 
 \end{itemize}
@@ -247,14 +249,14 @@ See Gantt Chart at the following url:
 
 \begin{itemize}
 
-\item \textbf{Test \#9: The game will have 3 separate modes - Kareem Says, JP Says, and Shady Says }
+\item \textbf{Test \#9: The game will have three separate modes- Kareem Says, JP Says, and Shady Says }
 \begin{itemize}
 \item Test ID: FT-FUNC-1
 \item Type: Functional, Dynamic, Manual 		
 \item Initial State: Desktop will be open.					
 \item Input: Mouse click on DNA Says application	
 \item Output: Main menu will open.					
-\item Execution: The tester will check if the 3 modes are available via the main menu.
+\item Execution: The tester will check if the three modes are available via the main menu.
 \end{itemize}
 
 \item \textbf{Test \#10: Every time a user passes a level, the score goes up by one point.}
@@ -272,58 +274,58 @@ See Gantt Chart at the following url:
 \item Test ID: FT-FUNC-3
 \item Type: Functional, Dynamic, Automated	
 \item Initial State: One of the three modes will be open.					
-\item Input: Mouse click on the incorrect pattern.					
+\item Input: Mouse click on the incorrect button.					
 \item Output: The score will be reset to zero and the screen will flash three times. 					
 \item Execution: The tester will play the game, they will input the incorrect pattern and observe the score.
 \end{itemize}
 
-\item \textbf{Test \#12: At level N, a random pattern of N disks will light up and be displayed to the user. }
+\item \textbf{Test \#12: At level N, a random pattern of N elements will light up and be displayed to the user. }
 \begin{itemize}
 \item Test ID: FT-FUNC-4
 \item Type: Functional, Dynamic, Automated		
 \item Initial State: One of the three modes will be open. 					
 \item Input: No input				
-\item Output: One disk/key will light up and produce a sound.		
-\item Execution: The user will attempt level one, and verify that one key/disk lights up. They can also do this for further levels. 
+\item Output: One button will light up and produce a sound.		
+\item Execution: The user will attempt level one, and verify that one button lights up. They can also do this for further levels. 
 \end{itemize}
 
-\item \textbf{Test \#13: The user cannot click the disks while the pattern is being displayed.}
+\item \textbf{Test \#13: The user cannot click on the buttons while the pattern is being displayed.}
 \begin{itemize}
 \item Test ID: FT-FUNC-5
 \item Type: Functional, Dynamic, Manual	
-\item Initial State: Level one of a mode will be open.					
-\item Input: Mouse click on a key/disk. 					
-\item Output: No output. 					
-\item Execution: The tester will attempt to click a key/disk while the computer is displaying the pattern and observe the behaviour of the program.
+\item Initial State: Level one of a mode will start.					
+\item Input: Mouse click on a button. 					
+\item Output: Sound played. 					
+\item Execution: The tester will attempt to click on a button while the computer is displaying the pattern and observe the behaviour of the program.
 \end{itemize}
 
-\item \textbf{Test \#14: The user will be able to click the disks once the pattern has been displayed.}
+\item \textbf{Test \#14: The user will be able to click on the buttons once the pattern has been displayed.}
 \begin{itemize}
 \item Test ID: FT-FUNC-6
 \item Type: Functional, Dynamic, Manual	
-\item Initial State: Level one of a mode will be open.					
-\item Input: Mouse click on a key/disk.					
-\item Output: Correct key/disk click - Key/disk will light up and produce a sound. Incorrect key/disk - Screen will flash threee times. 					
-\item Execution: After the pattern has been displayed, the tester will click the correct disk and verify that it can be clicked. The tester will also click an incorrect disk and verify that it can also be clicked.
+\item Initial State: Level one of a mode will be start.					
+\item Input: Mouse click on a button.					
+\item Output: Correct button click- button will light up and produce a sound. Incorrect button- screen will flash three times and a harmonic sound will play to indicate wrong input. 					
+\item Execution: After the pattern has been displayed, the tester will click the correct button and verify that it can be clicked. The tester will also click an incorrect button and verify that it can also be clicked.
 \end{itemize}
 
 \item \textbf{Test \#15: A level is passed if the user repeats the pattern correctly.}
 \begin{itemize}
 \item Test ID: FT-FUNC-7
 \item Type: Functional, Dynamic, Automated		
-\item Initial State: Level N of a mode will be open. 					
-\item Input: Mouse click on key/disk that are part of the pattern the computer displayed to the user.  		
-\item Output: After each correct click on a key/disk, that specific key/disk will light up and produce a sound. Also the score will increase by one when the correct pattern has been inputted completely. Then the next pattern will be displayed to the user. 					
+\item Initial State: Level N of a mode will be start. 					
+\item Input: Mouse click on button that are part of the pattern the computer displayed to the user.  	
+\item Output: After each correct click on a button, that specific button will light up and produce a sound. Also the score will increase by one when the correct pattern has been inputted completely. Then the next pattern will be displayed to the user. 					
 \item Execution: The tester will play a level in a one of the three modes and entire the correct pattern. 
 \end{itemize}
 
-\item \textbf{Test \#16: If the user fails, the game will restart - I.e. N =1.}
+\item \textbf{Test \#16: If the user fails, the game will restart- N =1.}
 \begin{itemize}
 \item Test ID: FT-FUNC-8
 \item Type: Functional, Dynamic, Automated	
 \item Initial State: One of the three modes will be open. 					
-\item Input: Mouse click on an incorrect disk/key. 					
-\item Output: The screen will flash white three times, the score will be reset to 0 and the user will be redirected to level 0.					
+\item Input: Mouse click on an incorrect button. 					
+\item Output: The screen will flash white three times, the score will be reset to 0 and the user will be redirected to level 1.					
 \item Execution: The tester will play the game, they will input the incorrect pattern. The user will verify that they are redirected to level 1.
 \end{itemize}
 
@@ -338,24 +340,24 @@ See Gantt Chart at the following url:
 
 \subsubsection{Look and Feel}
 \begin{itemize}
-\item \textbf{Test \#1: The product shall have an appealing colorful appearance.}
+\item \textbf{Test \#1: The product shall have an appealing colourful appearance.}
 \begin{itemize}
 \item Test ID: NFT-L1
 \item Type: Structural, Static, Manual				
 \item Initial State: Program installed onto system but not launched.		
 \item Input: Launch program
-\item Output: Menu page should be displayed with colorful appearance.		
-\item Execution: User launches the application and observes menu appearance, user satisfaction is recorded by user.
+\item Output: Menu page should have a colourful appearance.		
+\item Execution: User launches the application and observes the menu's appearance, then the user satisfaction is recorded by the user.
 \end{itemize}
 
-\item \textbf{Test \#2: The buttons must be well designed and colored}
+\item \textbf{Test \#2: The buttons must be well designed and coloured}
 \begin{itemize}
 \item Test ID: NFT-L2
 \item Type: Structural, Dynamic, Manual			
 \item Initial State: Application launched on main menu page.			
 \item Input: User selects mode to play			
 \item Output: Game starts in selected mode				
-\item Execution: User presses buttons on menu and again in mode selected to follow pattern, satisafaction regarding button appearance is recorded by the user.
+\item Execution: User presses buttons on menu and again in mode selected to follow pattern, satisfaction regarding button appearance is recorded by the user.
 \end{itemize}
 
 \item \textbf{Test \#3: The product shall have attractive sound patterns. The associated sounds with buttons must be well constructed and notes must follow harmonically.}
@@ -365,7 +367,7 @@ See Gantt Chart at the following url:
 \item Initial State: Program opened on main menu page.		
 \item Input: Select mode and start playing
 \item Output: There will be a note played with every button pressed.	
-\item Execution: User tries to follow visual/audio pattern shown, and observes sounds made by buttons pressed. Patterns to follow should have notes associated with them them compose a song or a little rhyme. User satisafaction with sounds is recorded.
+\item Execution: User tries to follow visual/audio pattern shown, and observes sounds made by buttons pressed. Patterns to follow should have notes associated with them them compose a song or a little rhyme. User satisfaction with sounds is recorded.
 \end{itemize}
 \end{itemize}
 
@@ -375,10 +377,10 @@ See Gantt Chart at the following url:
 \begin{itemize}
 \item Test ID: NFT-U1
 \item Type: Structural, Dynamic, Manual			
-\item Initial State: User's system active and functional, game not installed 		
-\item Input: User installs game from USB transfer			
+\item Initial State: User's system active and functional, and game not installed 		
+\item Input: User installs game via USB			
 \item Output: Game is installed easily onto system				
-\item Execution: User plugs in USB to transfer game from USB to their system, game is transfered with ease. User review recorded.
+\item Execution: User plugs in USB to transfer game from the USB key to their system, game is transferred with ease. User review is then recorded.
 \end{itemize}
 
 \item \textbf{Test \#5: The product shall be easy to use for people of all ages, including children.}
@@ -387,18 +389,18 @@ See Gantt Chart at the following url:
 \item Type: Structural, Dynamic, Manual				
 \item Initial State: Program opened on main menu page.		
 \item Input: Select any mode and start playing.
-\item Output: A simple one note/one button pattern will be played, user asked to repeat the pattern. Pattern length will keep incrementing
-\item Execution: User starts playing the game and following patterns shown, no instructions page will be necessary to clarify the game.
+\item Output: A simple one element pattern will be played, user asked to repeat the pattern. Pattern length will keep incrementing
+\item Execution: User starts playing the game and following patterns shown, instructions will be provided on every page.
 \end{itemize}
 
-\item \textbf{Test \#6: The product shall produce friendly messages when user loses or wins a level.}
+\item \textbf{Test \#6: The product shall produce a nice animation in the background when user loses or wins a level.}
 \begin{itemize}
 \item Test ID: NFT-U3
 \item Type: Structural, Dynamic, Manual				
 \item Initial State: Program opened on main menu page.		
 \item Input: Select any mode and start playing.
-\item Output: User will progress through levels, if user gets pattern right, next pattern is played without a message stating the user got it right. If user enters wrong pattern screen flashes three times with three notes sounding with the flashing
-\item Execution: User plays the game, records satisfaction with game response to patterns entered (both right or wrong patterns)
+\item Output: User will progress through levels. If the user gets the pattern right, the next pattern is played after a change in colour in the background. If user enters wrong pattern screen flashes three times with five notes sounding as well
+\item Execution: User plays the game, records satisfaction with game response to patterns entered (both right or wrong patterns).
 \end{itemize}
 
 \item \textbf{Test \#7: The product shall produce patterns both visually and auditory so as to accommodate for users with visual or auditory problems that they can use an alternative pattern means.}
@@ -420,8 +422,8 @@ See Gantt Chart at the following url:
 \item Type: Structural, Dynamic, Manual				
 \item Initial State: Program launched on main menu page		
 \item Input: User selects mode and starts playing, enters wrong button not to follow pattern.
-\item Output: Screen should flash three times with three notes.		
-\item Execution: User observes how long the game takes to detect wrong pattern entered, user records satisfacrtion with game response.
+\item Output: Screen should flash three times with five notes played.		
+\item Execution: User observes how long the game takes to detect wrong pattern entered, user records satisfaction with game response.
 \end{itemize}
 
 \item \textbf{Test \#9: The application must be specific to each button press. Button press confusion or mistake must not be tolerated}
@@ -431,33 +433,33 @@ See Gantt Chart at the following url:
 \item Initial State: Application launched on any mode.			
 \item Input: User follows all notes of a pattern except the last one, presses a wrong button			
 \item Output: Game should immediately detect wrong pattern input and flash three times.				
-\item Execution: User plays game until reaching a level with a long pattern, the user follows the pattern crrectly except for the last note, records whether the game detects the incorrect note or regards the pattern as correct.
+\item Execution: User plays game until reaching a level with a long pattern, the user follows the pattern correctly except for the last note, records whether the game detects the incorrect note or regards the pattern as correct.
 \end{itemize}
 
-\item \textbf{Test \#10: The application must be able to produce and receive patterns as long as 25 buttons.}
+\item \textbf{Test \#10: The application must be able to produce and receive patterns as long as 50 elements and greater.}
 \begin{itemize}
 \item Test ID: NFT-P3
 \item Type: Structural, Dynamic, Manual				
 \item Initial State: Program opened on main menu page.		
-\item Input: Select mode and start playing, reaches level 25, completes level.
-\item Output: There will be a winning message/sign displayed.
-\item Execution: User reaches level 25 of any mode which consists of a pattern of length 25 butons/notes. User should recieve a winning message upon completion of mode. 
+\item Input: Select mode and start playing, reaches level 50, completes level.
+\item Output: The game will be able to carry on normally.
+\item Execution: User reaches level 50 of any mode which consists of a pattern of length 50 buttons
 \end{itemize}
 \end{itemize}
 
 \subsubsection{Operational and Environmental}
 \begin{itemize}
-\item \textbf{Test \#11: The product should be able to be used on laptops and desktops.}
+\item \textbf{Test \#11: The product is to be used on laptops and desktops.}
 \begin{itemize}
 \item Test ID: NFT-O1
-\item Type: Structural, Dynmic, Manual				
+\item Type: Structural, Dynamic, Manual				
 \item Initial State: Laptop and desktop devices available for use.		
 \item Input: Launch program on laptop and desktop
 \item Output: Game should launch on both laptop and desktop.		
 \item Execution: User launches the application on different devices, laptops and desktops. User records whether application launches on every device or not.
 \end{itemize}
 
-\item \textbf{Test \#12: The product shall run in Windows, Linux and Mac OS X environments.}
+\item \textbf{Test \#12: The product shall run on Windows, Linux and Mac OS X environments.}
 \begin{itemize}
 \item Test ID: NFT-O2
 \item Type: Structural, Dynamic, Manual			
@@ -476,7 +478,7 @@ See Gantt Chart at the following url:
 \item Type: Structural, Dynamic, Manual				
 \item Initial State: Application launched in any game state.		
 \item Input: Follow pattern.
-\item Output: Patterns displayed, flashing with wrong input.		
+\item Output: Pattern displayed, flashing with wrong input.		
 \item Execution: Developer plays game, checks if application has stored any information from user.
 \end{itemize}
 \end{itemize}
@@ -484,7 +486,7 @@ See Gantt Chart at the following url:
 
 \subsubsection{Cultural}
 \begin{itemize}
-\item \textbf{Test \#14: The application shall not contain any imagery or text that can be reasonably foreseen as potentially offensive to users of all cultures, backgrounds and ethnicities.}
+\item \textbf{Test \#14: The application shall not contain any images or text that can be reasonably foreseen as potentially offensive to users of all cultures, backgrounds and ethnicities.}
 \begin{itemize}
 \item Test ID: NFT-C1
 \item Type: Structural, Dynamic, Manual				
@@ -538,13 +540,13 @@ See Gantt Chart at the following url:
 
 \begin{itemize}
 
-\item \textbf{Test \#4: Viewing mode - "Kareem Says"}
+\item \textbf{Test \#4: Viewing mode- "Kareem Says"}
 \begin{itemize}
 \item Test ID: POC-D-1
 \item Type: Functional, Dynamic, Manual 		
 \item Initial State: Desktop will be open. 					
 \item Input: Mouse click on the DNA Says application icon.			
-\item Output: Kareem Says mode will open displaying a piano.		
+\item Output: Kareem Says mode will open displaying a part of a piano.		
 \item Execution: The tester will open the application on a CPU. 
 \end{itemize}
 
@@ -571,7 +573,7 @@ See Gantt Chart at the following url:
 \item Initial State: Kareem Says mode will be open. 					
 \item Input: Mouse click on a correct key.  					
 \item Output: The key will light up and a sound will be outputted. The score increment will be incremented by one.				
-\item Execution: The tester will click on a correct key and view the score icon.  
+\item Execution: The tester will click on a correct key and view the score box.  
 \end{itemize}
 
 \item \textbf{Test \#7: Correct pattern increment}
@@ -593,17 +595,13 @@ See Gantt Chart at the following url:
 
 \par The implementation of DNA Says and Simon Says have many similarities and differences that will be outlined in this section. The main principle of the game stays constant however there are many improvements and modifications that have been added to truly make DNA Says unique. 
 \\
-\par The first significant difference between DNA Says and Simon Says is the fact that DNA Says has three modes. The original version of Simon Says only has one mode or one level which consists of 4 buttons that display the pattern to the user. In contrast DNA Says has three levels or three modes - each with a different implementation but overall the same theory from the Simon Says implementation. The first mode - Kareem Says, consists of piano keys that will display the pattern to the user. The second mode - Shady Says, consists of 4 different coloured buttons that will display the pattern to the user. The final mode - JP Says, consists of 9 different coloured buttons that will display the pattern to the user. 
+\par The main significant difference between DNA Says and Simon Says is the fact that DNA Says has three modes. The original version of Simon Says only has one mode or one level which consists of 4 buttons that display the pattern to the user. In contrast DNA Says has three levels or three modes; each with a different implementation but overall the same theory from the Simon Says implementation. The first mode, Kareem Says, consists of piano keys that will display the pattern to the user. The second mode, Shady Says, consists of four different coloured buttons that will display the pattern to the user. The final mode, JP Says, consists of nine different coloured buttons that will display the pattern to the user. 
 \\
-\par The second critical difference between the two implementations is the 4 second timeout. The original implementation - Simon Says, has no timeout. This means when the user clicks a button and does not click the next button, the program will wait for the user to enter the next button. In contrast, DNAY Says has a 4 second timeout that is implemented. When a user clicks a button/key and does not click the next button within 4 seconds, the player loses.
-\\
-\par The third significant difference between DNA Says and Simon Says is the protocol the program displays to the user when an incorrect button/key is inputted. The original version - Simon Says - displays the correct button that should have been clicked along with a sound that indicates an incorrect key has been inputted. The implementation of DNA Says makes the entire screen flash white 3 times and outputs a harmonic combination of notes that indicate an incorrect input. 
-\\
-\par Along with all the differences that truly make the game DNA Says truly unique, there are numerous similarities as the essence of the game is the same. Both implementations of the game have a main menu that allow the user to enter a mode and play the game. During a game, there is a score icon which displays the current score and there is also an exit button which will allow the user to return to the main menu.  
+\par Along with all the differences that truly make the game DNA Says truly unique, there are numerous similarities as the essence of the game is the same. Both implementations of the game have a main menu that allow the user to enter a mode and play the game. During a game, there is a score box which displays the current score and there is also an exit button which will allow the user to return to the main menu.  
 
 				
 \section{Unit Testing Plan}
-A set of unit tests will be performed on functions used inthe implementation of the system. This testing is to endure that changes to the game do not break the basic functioning of the game. Test cases that will be used are outlined below.
+A set of unit tests will be performed on functions used in the implementation of the system. This testing is to ensure that changes to the game do not break the basic functioning of the game. Test cases that will be used are outlined below.
 
 \subsection{Unit testing of internal functions}
 
@@ -615,7 +613,7 @@ A set of unit tests will be performed on functions used inthe implementation of 
 \item Description: Tests if game quits when quit button is pressed at any point of the game.	
 \item Initial State: Game active in any of the modes, a pattern is being played by the computer for the user to repeat it.
 \item Input: Quit button pressed.
-\item Output: Mode is exited, goes to main menu page.	
+\item Output: Game quits.	
 \end{itemize}
 
 \item \textbf{Test \#2}
@@ -625,17 +623,17 @@ A set of unit tests will be performed on functions used inthe implementation of 
 \item Description:Tests if key animation is error proof with wrong inputs
 \item Initial State: Game launched in any mode
 \item Input: Key, animationSpeed
-\item Output: Button visual and associated sound, no output for inputs out of range or nonexisting		
+\item Output: Button visual and associated sound, no output for inputs out of range or non existing		
 \end{itemize}
 
 \item \textbf{Test \#3}
 \begin{itemize}
 \item Test: changeBackgroundAnimation
 \item Type: Unit Test (dynamic, automated)			
-\item Description: Tests changing background color with wrong input.	
+\item Description: Tests changing background colour with wrong input.	
 \item Initial State: Game launched in any mode
 \item Input: animationSpeed.
-\item Output: Patterns displayed, flashing with wrong input.		
+\item Output: Patterns displayed, background colour changed.	
 \end{itemize}
 
 \item \textbf{Test \#4}
@@ -645,7 +643,7 @@ A set of unit tests will be performed on functions used inthe implementation of 
 \item Description: Tests game response to different game over responses in terms of flashing screen and chord played.	
 \item Initial State: User enters wrong pattern
 \item Input: color, animationSpeed
-\item Output: Screen flashes and cord played.		
+\item Output: Screen flashes white three times and chord played.		
 \end{itemize}
 
 \item \textbf{Test \#5}
@@ -655,14 +653,14 @@ A set of unit tests will be performed on functions used inthe implementation of 
 \item Description: Tests key clicks used for input by user.	
 \item Initial State: Any game state 	
 \item Input: x and y coordinates of the click
-\item Output: If click is within range of button, button is selected, otherwise click does nothing.		
+\item Output: If click is within range of button, that button is returned, otherwise click does nothing.		
 \end{itemize}
 
 \end{itemize}
 
 		
 \subsection{Unit testing of output files}	
-The application does not generate any output files. The output for this application is the patterns played by the system	as well as the error flashing in response to wrong pattern input. Test covergae for these outputs is covered in the above unit testing area.
+The application does not generate any output files. The output for this application is the patterns played by the system as well as the error flashing in response to wrong pattern input. Test coverage for these outputs is covered in the above unit testing area.
 
 
 \newpage
@@ -676,7 +674,7 @@ The application does not generate any output files. The output for this applicat
 key & Buttons are represented by keys in the code, each button has its own key.\\
 checkForQuit & Function to check if Quit button has been pressed.\\
 flashKeyAnimation & Function to produce the flashing animation for a select key passed to it as a parameter.\\
-changeBackgroundAnimation & Function to change background color smoothly.\\
+changeBackgroundAnimation & Function to change background colour dynamically.\\
 gameOverAnimation & Function that causes the background to flash three times along with a chord played. This happens when user enters wrong pattern.\\
 getKeyClicked & Function to check coordinates of mouse click and map it to corresponding button.\\
 \bottomrule
@@ -689,11 +687,11 @@ Sample Survey to be handed out to test users:
 \begin{center}
 {\bf \large User Experience Survey}\\[\baselineskip]
 \end{center}
-\noindent The following survey should be filled out after playing the game for at least 30 minutes.\\
+\noindent The following survey should be filled out after playing the game for at least 15 minutes.\\
 \\
 \noindent {\bf Time played:}\\
 \\
-\noindent Please provide a ranking between 0 and 10 in each of the following categories, 0 being most boring, 10 being most fun.  Please include notes on the things you liked and the ones you did not like. Please also include suggestions to improve the game\\[\baselineskip]
+\noindent Please provide a ranking between 0 and 10 in each of the following categories, 0 being most boring, 10 being most fun.  Please include notes on the things you liked and the ones you did not like. Please also include suggestions to improve the game.\\[\baselineskip]
 \noindent \begin{tabularx}{\textwidth}{@{}p{3.5cm}X@{}}
 \noindent {\bf Entertainment:}\\
 \\
@@ -703,8 +701,7 @@ Sample Survey to be handed out to test users:
 \\
 \noindent {\bf Sounds:}\\
 \\
-\\
-{\bf Notes:} & \\[5\baselineskip]
+{\bf Song:} & \\[5\baselineskip]
 \end{tabularx}
 \end{mdframed}
 \end{document}

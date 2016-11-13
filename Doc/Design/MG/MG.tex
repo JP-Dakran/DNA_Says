@@ -400,10 +400,8 @@ system or by standard programming language libraries.
 
 
 \section{Traceability Matrix} \label{SecTM}
-
 This section shows two traceability matrices: between the modules and the
 requirements and between the modules and the anticipated changes.
-
 % the table should use mref, the requirements should be named, use something
 % like fref
 \begin{table}[H]
@@ -412,17 +410,22 @@ requirements and between the modules and the anticipated changes.
 \toprule
 \textbf{Req.} & \textbf{Modules}\\
 \midrule
-R1 & \mref{mHH}, \mref{mInput}, \mref{mParams}, \mref{mControl}\\
-R2 & \mref{mInput}, \mref{mParams}\\
-R3 & \mref{mVerify}\\
-R4 & \mref{mOutput}, \mref{mControl}\\
-R5 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R6 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R7 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R8 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R9 & \mref{mVerifyOut}\\
-R10 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}\\
-R11 & \mref{mOutput}, \mref{mODEs}, \mref{mEnergy}, \mref{mControl}\\
+R1 & \mref{mHH1}\\
+R2 & \mref{mHH2}, \mref{mHH3}\\
+R3 & \mref{mHH3}, \mref{mHH4}, \mref{mHH5}, \mref{mHH6}, \mref{mHH12}\\
+R4 & \mref{mHH2}, \mref{mHH3}, \mref{mHH7}, \mref{mHH12}\\
+R5 & \mref{mHH4}, \mref{mHH5}, \mref{mHH6}, \mref{mHH7}, \mref{mHH8}, \mref{mHH12}\\
+R6 & \mref{mHH4}, \mref{mHH5}, \mref{mHH6}, \mref{mHH8}, \mref{mHH12}, \mref{mHH13}\\
+R7 & \mref{mHH13}\\
+R8 & \mref{mHH16}\\
+R9 & \mref{mHH10}\\
+R10 & \mref{mHH10}, \mref{mHH15}\\
+R11 & \mref{mHH10}\\
+R12 & \mref{mHH4}, \mref{mHH5}, \mref{mHH6}, \mref{mHH13}\\
+R13 & \mref{mHH4}, \mref{mHH5}, \mref{mHH6}, \mref{mHH12}\\
+R14 & \mref{mHH8}, \mref{mHH12}, \mref{mHH13}\\
+R15 & \mref{mHH4}, \mref{mHH5}, \mref{mHH6}\\
+R16 & \mref{mHH4}, \mref{mHH5}, \mref{mHH6}, \mref{mHH14}, \mref{mHH15}\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Requirements and Modules}

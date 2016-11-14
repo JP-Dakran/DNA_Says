@@ -61,6 +61,7 @@
 12/11/2016 & 1.4 & Addition of section 7\\
 13/11/2016 & 1.5 & Addition of section 5, 6\\
 13/11/2016 & 2.0 & First Revision\\
+13/11/2016 & 2.1 & Second Revision\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -77,7 +78,7 @@
 \subsection{Context}
 \par This document consists of the Module Guide (MG) for the project DNA Says. This is the second portion of the design documentation along with the Module Interface Specification (MIS) - which explains the semantics of the code in natural language. \\
 \par The Module Guide is a decomposition of the software system into modules. A module is an independent self-contained unit that makes up a complex software system. Decomposing a problem into modules is an extremely important aspect of software design as it promotes the principle of information hiding. Each module is completed concurrently by a programmer and houses a secret of the modules functionality.\\
-\par The Module Guide (MG) reveals how the software system will carry out the functionality that is described in the Software Requirements Specification (SRS) document. The potential readers of the document are listed below:
+\par The Module Guide (MG) reveals how the software system will carry out the functionality that is described in the Software Requirements Specification (SRS) document. The potential readers of this document are listed below:
 \begin{itemize}
 \item Designers/Developers: This document is extremely important for the designers of the software system. It provides a means for the designers to easily identify different parts of the software and relate the implementation to the requirements.
 \item New Project Members: This document allows new project members to easily identify the components of the software system. It is a simple way to understand and locate information that relates to specific parts of the software. 
@@ -85,7 +86,7 @@
 \end{itemize}
 
 \subsection{Design Principles}
-\par The first major design principle utilized by the developers of DNA Says is modularity. This design principle was achieved by dividing the software into independent self-contained units. After the conncurrent development of the individual modules they are integrated together to full the functional and non-functional requirements in the SRS.\\
+\par The first major design principle utilized by the developers of DNA Says is modularity. This design principle was achieved by dividing the software into independent self-contained units. After the concurrent development of the individual modules, they are integrated together to fulfill the functional and non-functional requirements in the SRS.\\
 
 \par The second major design principle used in this software system is abstraction. After division of the software system into modules, each module was viewed at an abstract level. In other words, the design team neglected the implementation of the module and focused on the most essential information which is relevant to that specific module.  \\
 
@@ -118,6 +119,7 @@ other shows the relation between anticipated changes and the modules. Section
 MG & Module Guide\\
 SRS & Software Requirements Specification\\
 MVC & Model View Controller\\
+OS & Operating System\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -166,7 +168,7 @@ change.
 The module design should be as general as possible. However, a general system is
 more complex. Sometimes this complexity is not necessary. Fixing some design
 decisions at the system architecture stage can simplify the software design. If
-these decision should later need to be changed, then many parts of the design
+these decisions should later need to be changed, then many parts of the design
 will potentially need to be modified. Hence, it is not intended that these
 decisions will be changed.
 
@@ -221,7 +223,6 @@ actually be implemented.
 & M9\\
 & M10\\
 & M11\\ 
-& M12\\
 \midrule
 
 \multirow{3}{0.3\textwidth}{Software Decision Module} 
@@ -229,6 +230,7 @@ actually be implemented.
 & M4\\
 & M5\\
 & M6\\
+& M12\\
 & M13\\
 & M14\\
 & M15\\
@@ -276,7 +278,7 @@ system or by standard programming language libraries.
 \item[Secrets:]The contents of the required behaviours.
 \item[Services:]Includes programs that provide externally visible behaviour of
   the system as specified in the software requirements specification (SRS)
-  documents. This module serves as a communication layer between the
+  document. This module serves as a communication layer between the
   hardware-hiding module and the software decision module. The programs in this
   module will need to change if there are changes in the SRS.
 \item[Implemented By:] N/A
@@ -324,13 +326,6 @@ system or by standard programming language libraries.
 \item[Implemented By:] DNA Says
 \end{description}
 
-\subsubsection{DrawKeys Module (\mref{mHH12})}
-\begin{description}
-\item[Secrets:]The algorithm used to draw the buttons depending on the mode.
-\item[Services:]Draws the buttons on the screen.
-\item[Implemented By:] DNA Says
-\end{description}
-
 
 \subsection{Software Decision Module}
 \begin{description}
@@ -361,7 +356,7 @@ system or by standard programming language libraries.
 \subsubsection{Kareem Module (\mref{mHH5})}
 \begin{description}
 \item[Secrets:]The size of keys and their positions, the implementation of the display. The algorithm and implementation of the song pattern, both visual and auditory.
-\item[Services:]Starts the mode Kareem Says with piano keyboard. It plays the elements that are contained in the pattern, then checks for the user's input. If the user clicked the correct button then its sound is played and its key is highlighted temporarily, and the score is incremented. In the meantime, the program appends a random element to the pattern to be played, and the pattern is played, and the cycle goes on. However, if the user clicks on the wrong key, the game will be over. The game will also end if the user clicks on one correct key, and waits for more than four seconds, assuming that there is more than one element in the last pattern played. If the user clicks on the main menu button, the program will redirect them to the main menu.
+\item[Services:]Starts the mode Kareem Says with a piano keyboard. It plays the elements that are contained in the pattern, then checks for the user's input. If the user clicked the correct button then its sound is played and its key is highlighted temporarily, and the score is incremented. In the meantime, the program appends a random element to the pattern to be played, and the pattern is played, and the cycle goes on. However, if the user clicks on the wrong key, the game will be over. The game will also end if the user clicks on one correct key, and waits for more than four seconds, assuming that there is more than one element in the last pattern played. If the user clicks on the main menu button, the program will redirect them to the main menu.
 \item[Implemented By:] DNA Says
 \end{description}
 
@@ -369,6 +364,13 @@ system or by standard programming language libraries.
 \begin{description}
 \item[Secrets:]The size of keys and their positions, the implementation of the display. The algorithm and implementation of the song pattern, both visual and auditory.
 \item[Services:]Starts the mode Shady Says with four buttons in square shape. It plays the elements that are contained in the pattern, then checks for the user's input. If the user clicked the correct button then its sound is played and its key is highlighted temporarily, and the score is incremented. In the meantime, the program appends a random element to the pattern to be played, and the pattern is played, and the cycle goes on. However, if the user clicks on the wrong key, the game will be over. The game will also end if the user clicks on one correct key, and waits for more than four seconds, assuming that there is more than one element in the last pattern played. If the user clicks on the main menu button, the program will redirect them to the main menu.
+\item[Implemented By:] DNA Says
+\end{description}
+
+\subsubsection{DrawKeys Module (\mref{mHH12})}
+\begin{description}
+\item[Secrets:]The algorithm used to draw the buttons depending on the mode.
+\item[Services:]Draws the buttons on the screen.
 \item[Implemented By:] DNA Says
 \end{description}
 
@@ -472,5 +474,6 @@ because they use modules from the lower levels.
 
 \bibliographystyle {plainnat}
 \bibliography {MG}
+
 
 \end{document}

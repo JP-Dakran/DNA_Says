@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><project name="DNA_Says" company="DNA" webLink="https://gitlab.cas.mcmaster.ca/dakranj/DNA_Says" view-date="2016-08-28" view-index="0" gantt-divider-location="545" resource-divider-location="300" version="2.8.1" locale="en_CA">
     <description><![CDATA[Gantt Chart]]></description>
     <view zooming-state="default:7" id="gantt-chart">
-        <field id="tpd3" name="Name" width="378" order="0"/>
-        <field id="tpd4" name="Begin date" width="79" order="1"/>
+        <field id="tpd3" name="Name" width="379" order="0"/>
+        <field id="tpd4" name="Begin date" width="80" order="1"/>
         <field id="tpd5" name="End date" width="82" order="2"/>
         <timeline><![CDATA[0]]></timeline>
-        <option id="color.recent"><![CDATA[#006666 #eeeeee #000000 #cc0000 #ffffcc #33ffcc #666666 #999900 #ccccff #99ff99]]></option>
+        <option id="color.recent"><![CDATA[#999900 #006666 #eeeeee #000000 #cc0000 #ffffcc #33ffcc #666666 #ccccff #99ff99]]></option>
     </view>
     <view id="resource-table">
-        <field id="0" name="Name" width="209" order="0"/>
-        <field id="1" name="Default role" width="85" order="1"/>
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -112,7 +112,9 @@
             </task>
             <task id="375" name="8.2) Module Interface Specifications" color="#006666" meeting="false" start="2016-11-03" duration="9" complete="0" expand="true"/>
         </task>
-        <task id="65" name="9) Demonstration- Revision 0" color="#999900" meeting="false" start="2016-11-14" duration="5" complete="0" expand="true"/>
+        <task id="65" name="9) Demonstration- Revision 0" color="#999900" meeting="false" start="2016-11-14" duration="3" complete="0" expand="true">
+            <task id="376" name="9.1) Update Requirements" color="#999900" meeting="false" start="2016-11-14" duration="3" complete="0" expand="true"/>
+        </task>
         <task id="67" name="10) Final Demonstration- Revision 1" color="#666666" meeting="false" start="2016-11-28" duration="5" complete="0" expand="true"/>
         <task id="69" name="11) Peer Evaluation of Other Teams' Demonstration" color="#33ffcc" meeting="false" start="2016-11-28" duration="5" complete="0" expand="true"/>
         <task id="71" name="12) Final Documentation" color="#ffffcc" meeting="true" start="2016-12-07" duration="0" complete="0" expand="true"/>
@@ -149,6 +151,7 @@
         <allocation task-id="254" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="20.0"/>
         <allocation task-id="90" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="10.0"/>
         <allocation task-id="91" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="20.0"/>
+        <allocation task-id="376" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="10.0"/>
         <allocation task-id="0" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="18" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="44" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
@@ -164,6 +167,7 @@
         <allocation task-id="254" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="20.0"/>
         <allocation task-id="90" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="10.0"/>
         <allocation task-id="91" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="20.0"/>
+        <allocation task-id="376" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="10.0"/>
         <allocation task-id="0" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="18" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="44" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
@@ -178,6 +182,7 @@
         <allocation task-id="254" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="20.0"/>
         <allocation task-id="90" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="10.0"/>
         <allocation task-id="91" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="20.0"/>
+        <allocation task-id="376" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="10.0"/>
     </allocations>
     <vacations/>
     <previous/>

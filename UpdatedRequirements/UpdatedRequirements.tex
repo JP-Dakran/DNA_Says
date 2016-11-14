@@ -1,0 +1,472 @@
+\documentclass[12pt, titlepage]{article}
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=red,
+    urlcolor=blue
+}
+\usepackage[round]{natbib}
+
+\title{SE 3XA3: Software Requirements Specification\\DNA Says}
+\author{Team 10, Team Name: DNA
+		\\ Kareem Abdel Mesih (abdelk2)
+		\\ John-Paul Dakran (dakranj)
+		\\ Shady Nessim (nessimss)
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\pagenumbering{roman}
+
+\newpage
+
+\pagenumbering{arabic}
+
+\section{Functional Requirements}
+
+\begin{itemize}
+
+\item Requirement \#1
+\begin{itemize}
+\item Description: The user will be able to open the executable file.
+\item Rationale: The user must be able to open the game.
+\item Fit Criterion: A new window will open on the user's computer screen.
+\end{itemize}
+
+\item Requirement \#2
+\begin{itemize}
+\item Description: The game interface will open in a new window.
+\item Rationale: The game will be operated in a separate window. 
+\item Fit Criterion: A new window will appear on the user's computer screen
+\end{itemize}
+
+\item Requirement \#3
+\begin{itemize}
+\item Description: The game will have 3 separate modes - Kareem Says, JP Says, and Shady Says.
+\item Rationale: The game is designed to have 3 distinct modes.
+\item Fit Criterion: The three different modes will be displayed in the main menu of the game. 
+\end{itemize}
+
+\item Requirement \#4
+\begin{itemize}
+\item Description: The user will be able to select one of the three modes to play.
+\item Rationale: The user must be able to play one mode at a time. 
+\item Fit Criterion: The user will be able to select one of the three modes displayed in the main menu of the game.
+\end{itemize}
+
+\item Requirement \#5
+\begin{itemize}
+\item Description: The main menu will display the three different modes. 
+\item Rationale: The user must be able to view which mode they wish to select.
+\item Fit Criterion: Three distinct icons will be displayed in the main menu.
+\end{itemize}
+
+\item Requirement \#6
+\begin{itemize}
+\item Description: If Kareem Says is selected, then a piano will be displayed on the screen, otherwise nine squared buttons will show up for JP Says, and four for Shady Says.
+\item Rationale: The game is designed to have different interfaces for each mode.
+\item Fit Criterion: When a user selects a mode - accordingly, either a piano will show up, nine buttons or four buttons. 
+\end{itemize}
+
+\item Requirement \#7
+\begin{itemize}
+\item Description: Each button will light up and produce a different sound when clicked.
+\item Rationale: This gives the user the ability to detect the pattern that will be displayed.
+\item Fit Criterion: When the user clicks a button, the button will light up and produce a sound.
+\end{itemize}
+
+\item Requirement \#8
+\begin{itemize}
+\item Description: The user will be able to exit the game at any time and go back to the main menu. 
+\item Rationale: The user must have a means of exiting an ongoing game and return to the main menu.
+\item Fit Criterion: When the user clicks the main menu button, they will find their screen in the main menu window.
+\end{itemize}
+
+\item Requirement \#9
+\begin{itemize}
+\item Description: Every time a user passes a level, the score goes up by one point.
+\item Rationale: A record of a user's score must be kept. 
+\item Fit Criterion: At level N, the score = N.
+\end{itemize}
+
+\item Requirement \#10
+\begin{itemize}
+\item Description: Every time a user fails a level, the score is reset to zeo.
+\item Rationale: When a user fails a level, the game must restart from level one.
+\item Fit Criterion: Whenever the user makes a mistake, the score text will reset to zero.
+\end{itemize}
+
+\item Requirement \#11
+\begin{itemize}
+\item Description: There will be a score icon in the top right corner.
+\item Rationale: The user must be able to view their score.
+\item Fit Criterion: When the user selects a mode, the score icon will be set to zero.
+\end{itemize}
+
+\item Requirement \#12
+\begin{itemize}
+\item Description: At level N, a random pattern of N disks will light up and be displayed to the user.
+\item Rationale: The pattern's length will increase as the levels progress.
+\item Fit Criterion: During level one, one random button will light up and sound.
+\end{itemize}
+
+\item Requirement \#13
+\begin{itemize}
+\item Description: The user cannot click the button while the pattern is being displayed. 
+\item Rationale: The pattern must be displayed to the user in full effect.
+\item Fit Criterion: The program will not record clicks the user inputs during this time.
+\end{itemize}
+
+\item Requirement \#14
+\begin{itemize}
+\item Description: The user will be able to click the buttons once the pattern has been displayed. 
+\item Rationale: The user must repeat the pattern correctly to pass the level.
+\item Fit Criterion: The program will monitor the user's input clicks to determine if the entry is correct or not.
+\end{itemize}
+
+\item Requirement \#15
+\begin{itemize}
+\item Description: A level is passed if the user repeats the pattern correctly.
+\item Rationale: The user will be able to progress through the game. 
+\item Fit Criterion: The score will be increased by 1 when the user is successful.
+\end{itemize}
+
+\item Requirement \#16
+\begin{itemize}
+\item Description: If the user fails, the game will restart - I.e. N = 1.
+\item Rationale: The user must restart from the beginning of the game when a mistake is made.
+\item Fit Criterion: Whenever a mistake is made, the user will be directed to level one.
+\end{itemize}
+
+\end{itemize}
+
+
+\section{Non-functional Requirements}
+\subsection{Look and Feel Requirements}
+\subsubsection{Appearance Requirements}
+
+\begin{itemize}
+
+\item Requirement \#1 
+\begin{itemize}
+\item Description: The product shall have an appealing colorful appearance.
+\item Rationale: The display should always be engaging so as to keep user interested in game. The product must be aesthetically pleasing and easy to use to beneﬁt the end-users
+\item Originator: Shady Nessim 
+\item Fit Criterion: Stakeholder satisfaction regarding the appearance, user attraction to game. 
+\item Priority: High 
+\item History: Created October 5, 2016 \\
+\end{itemize}
+
+\item Requirement \#2 
+\begin{itemize} 
+\item Description: The buttons must be well designed and colored.
+\item Rationale: The game revolves around pressing buttons in a pattern. It is the main entity of the game and must thus be aesthetically pleasing to attract user interest
+\item Originator: Shady Nessim 
+\item Fit Criterion: User reaches high levels as a result of uniqueness and beauty of buttons. 
+\item Priority: High 
+\item History: Created October 5, 2016 \\
+\end{itemize}
+
+\item Requirement \#3 
+\begin{itemize} 
+\item Description: The product shall have attractive sound patterns. The associated sounds with buttons must be well constructed and notes must follow harmonically.
+\item Rationale: The user follows a pattern based on colors and sounds, the sounds must thus be well designed to be easy to follow. When user hears an attractive pattern, naturally they are inclined to repeat it.
+\item Originator: Shady Nessim 
+\item Fit Criterion: User shall be invested in game and spend a lot of time playing the game. 
+\item Priority: High 
+\item History: Created October 5, 2016 \\
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Style Requirements}
+\begin{itemize} 
+
+\item Requirement \#4 
+\begin{itemize} 
+\item Description: The product shall have enough buttons to keep game engaging but not too many as to make the screen feel cluttered. DNA Says will appear to be a bright upbeat game. 
+\item Rationale: The game must induce a style and feel to the user that will be a driving factor to use the game if the user likes the style of the game
+\item Originator: Shady Nessim 
+\item Fit Criterion: Stakeholder satisfaction regarding the style, user attraction to game. 
+\item Priority: Medium 
+\item History: Created October 5, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Usability and Humanity Requirements}
+\subsubsection{Ease of Use Requirements}
+\begin{itemize}
+
+\item Requirement \#5
+\begin{itemize}  
+\item Description: The product shall be easy to use for people of all ages, including children. 
+\item Rationale: The game involves no reading or writing, it does not involve intelligence either. The game involves short term memory. As such it should be easy to use for all people to improve their short term memory.
+\item Originator: Shady Nessim 
+\item Fit Criterion: User figures out how to play the game within the first couple of minutes of use. 
+\item Priority: High 
+\item History: Created October 5, 2016
+\end{itemize}
+
+\item Requirement \#6
+\begin{itemize}  
+\item Description: The product shall be easy to install for all users. 
+\item Rationale: This product is simply a game so the user will probably not go through the trouble of downloading and installing the game if it is not an easy process.
+\item Originator: Shady Nessim 
+\item Fit Criterion: User easily downloads and installs the game in a timely manner. 
+\item Priority: High 
+\item History: Created October 5, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Personalization and Internationalization Requirements}
+\begin{itemize} 
+
+\item Requirement \#7
+\begin{itemize} 
+\item Description: The product shall operate with the English language. 
+\item Rationale: The application is intended for use by English and non-English speakers, however with minimal required text use, this game can easily be figured out and used by non-English speakers
+\item Originator: Shady Nessim 
+\item Fit Criterion: User easily understands objective of game and how to play. 
+\item Priority: Medium 
+\item History: Created October 5, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Learning Requirements}
+\begin{itemize} 
+
+\item Requirement \#8 
+\begin{itemize} 
+\item Description: The application shall not require a tutorial and shall be clear and simple enough in early levels to communicate to the user how the game is played.
+\item Rationale: The application is intended for use by people of all ages. Must thus be easy to understand.
+\item Originator: Shady Nessim 
+\item Fit Criterion: User easily understands objective of game and how to play. 
+\item Priority: Medium 
+\item History: Created October 5, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Understandability and Politeness Requirements}
+\begin{itemize}
+
+\item Requirement \#9
+\begin{itemize}  
+\item Description: The application shall not produce ugly sound patterns or offensive visual patterns to respect all users.
+\item Rationale: The application is intended for entertainment and as a cure for boredom, if user feels uncomfortable or offended they will not use the game.
+\item Originator: Shady Nessim 
+\item Fit Criterion: User feels good about game and patterns are appealing and attractive. 
+\item Priority: Medium 
+\item History: Created October 5, 2016
+\end{itemize}
+
+\item Requirement \#10
+\begin{itemize} 
+\item Description: The product shall produce a friendly indication when user loses or wins a level.
+\item Rationale: The application is intended for entertainment and as a cure for boredom, if user feels uncomfortable or offended they will not use the game.
+\item Originator: Shady Nessim 
+\item Fit Criterion: User feels good about level progression and is encouraged to play again. 
+\item Priority: Medium 
+\item History: Created October 5, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Accessibility Requirements}
+\begin{itemize} 
+
+\item Requirement \#11
+\begin{itemize} 
+\item Description: The product shall produce patterns both visually and auditory so as to accommodate for users with visual or auditory problems that they can use an alternative pattern means.
+\item Rationale: The application is intended all users, should be easy to use for someone by just following visual patterns or just following auditory patterns.
+\item Originator: Shady Nessim 
+\item Fit Criterion: User with auditory or visual problems feel comfortable playing the game. 
+\item Priority: Medium 
+\item History: Created October 5, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Performance Requirements}
+\subsubsection{Speed and Latency Requirements}
+\begin{itemize}
+
+\item Requirement \#12 
+\begin{itemize} 
+\item Description: The application should be able to recognize whether the user has entered the right pattern as soon as they finish pressing the last button.
+\item Rationale: The user should not have to wait for the application to calculate whether their input was correct or not.
+\item Originator: Shady Nessim 
+\item Fit Criterion: Application should respond immediately to user input and the upcoming pattern should start soon after user input ends.
+\item Priority: High 
+\item History: Created October 5, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Safety Critical Requirements}
+There are none applicable to this project.
+
+\subsubsection{Precision of Accuracy Requirements}
+\begin{itemize}
+
+\item Requirement \#13 
+\begin{itemize} 
+\item Description: The application must be specific to each button press. Button press confusion or mistake must not be tolerated.
+\item Rationale: The purpose of the game is to produce exact same pattern shown by application. If program does not detect a mistake even if it is just one wrong button, then that defeats the fairness and purpose of the game.
+\item Originator: Shady Nessim 
+\item Fit Criterion: Application should perceive and evaluate user pattern input impeccably.
+\item Priority: High 
+\item History: Created October 5, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Reliability and Availability Requirements}
+\begin{itemize} 
+
+\item Requirement \#14 
+\begin{itemize} 
+\item Description: The application must be available at all times.
+\item Rationale: The purpose of the game is to defeat boredom which may come at any time and thus the game must be available at all times.
+\item Originator: Shady Nessim 
+\item Fit Criterion: User should be able to play the game whenever they are bored.
+\item Priority: High 
+\item History: Created October 5, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Capacity Requirements}
+\begin{itemize}
+
+\item Requirement \#15 
+\begin{itemize} 
+\item Description: The application must be able to produce and receive patterns as long as 25 buttons.
+\item Rationale: In order to make the game challenging enough, patterns up to 25 in length should be produced and received by program.
+\item Originator: Shady Nessim 
+\item Fit Criterion: User should be able to reach level 25 in each mode.
+\item Priority: Medium 
+\item History: Created October 5, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Scalability Requirements}
+There are none applicable to the project.
+
+\subsubsection{Longevity Requirements}
+There are none applicable to the project.
+
+\subsection{Operational and Environmental Requirements}
+\subsubsection{Expected Physical Environment}
+\begin{itemize}
+
+\item Requirement \#16
+\begin{itemize} 
+\item Description: The product should be able to be used on laptops and desktops. 
+\item Rationale: The clients will use the product from these devices.
+\item Originator: Shady Nessim 
+\item Fit Criterion: User should be able to run the game on any laptop or desktop.
+\item Priority: High 
+\item History: Created October 8, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Release Requirements}
+\begin{itemize} 
+
+\item Requirement \#17
+\begin{itemize} 
+\item Description: The product will be revised yearly and updated according to changing demands and needs of the client. The product will undergo maintenance upon realization of any errors in gameplay behavior.
+\item Rationale: The game has to stay updated and problems have to be handled in order to maintain user interest and usage.
+\item Originator: Shady Nessim 
+\item Fit Criterion: App should be updated at least annually.
+\item Priority: Medium 
+\item History: Created October 8, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Maintainability and Support Requirements}
+\subsubsection{Maintenance Requirement}
+\begin{itemize}
+
+\item Requirement \#18
+\begin{itemize} 
+\item Description: The source code for the application shall be visible to the public. 
+\item Rationale: This enhances the ability to monitor and maintain the system. 
+\item Originator: Shady Nessim
+\item Fit Criterion: Source code is available in a public repository. 
+\item Priority: Low 
+\item History: Created October 10, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection{Supportability Requirements}
+None applicable for this project.
+
+\subsubsection{Adaptability Requirements}
+\begin{itemize} 
+
+\item Requirement \#19
+\begin{itemize} 
+\item Description: The product shall run on Windows, Linux and Mac OS X environments.
+\item Rationale: The users may be using any of these operating systems.
+\item Originator: Shady Nessim 
+\item Fit Criterion: The product works on listed platforms in the test groups.
+\item Priority: Medium 
+\item History: Created October 10, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Security Requirements}
+\subsubsection{Privacy Requirements}
+\begin{itemize} 
+
+\item Requirement \#20
+\begin{itemize} 
+\item Description: The application shall not store, transmit, or upload any user data.
+\item Rationale: This is required in order to protect the privacy of users.
+\item Originator: Shady Nessim
+\item Fit Criterion: No functionality to perform these tasks is implemented in the application. 
+\item Priority: Low 
+\item History: Created October 10, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Cultural Requirements}
+\begin{itemize}
+
+\item Requirement \#21
+\begin{itemize} 
+\item Description: The application shall not contain any imagery or text that can be reasonably foreseen as potentially oﬀensive to users of all cultures, backgrounds and ethnicities. 
+\item Rationale: User satisfaction will be greatly reduced if they notice any offensive patterns in the game. 
+\item Originator: Shady Nessim
+\item Fit Criterion: Application does not contain offensive patterns or references. 
+\item Priority: Medium 
+\item History: Created October 10, 2016
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Legal Requirements}
+There are none applicable to this project.
+
+\end{document}

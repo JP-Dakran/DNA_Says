@@ -1,5 +1,3 @@
 # Test Plan
 
-The folders and files for this folder are as follows:
-
-Describe ...
+This folder contains the test plan.

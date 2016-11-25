@@ -105,7 +105,7 @@ def main():
     B4  = pygame.mixer.Sound('B4.ogg')
     C5  = pygame.mixer.Sound('C5.ogg')
 
-    goBack = pygame.Rect(20, 15, 55, 38)
+    goBack = pygame.Rect(20, 15, 45, 20)
     menu()
 
 
@@ -144,9 +144,9 @@ def showInst(instText):
 #  initializes the text box to hold that text, giving it a set position.
 #  It then displays it on the screen.
 def showGoBack():
-    goBackText = titleFont.render('<-', 1, white)
+    goBackText = font.render('Back', 1, white)
     goBackBox  = goBackText.get_rect()
-    goBackBox.topleft = (20, 0)
+    goBackBox.topleft = (23, 18)
     screen.blit(goBackText, goBackBox)
 
 
@@ -734,7 +734,8 @@ def drawKeys():
         pygame.draw.rect(screen, green,  sGreen)
         pygame.draw.rect(screen, blue,   sBlue)
         
-    pygame.draw.rect(screen, grey,  goBack)
+    pygame.draw.rect(screen, black,  goBack)
+    showGoBack()
 
 
 ## @brief Changes the background color smoothly

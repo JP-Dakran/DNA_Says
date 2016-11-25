@@ -1,1 +1,1 @@
-This folder holds all the files that contain code.
+This folder contains the source file along with a zip file that contains the sounds used.

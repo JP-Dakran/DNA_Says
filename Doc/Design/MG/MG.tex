@@ -227,7 +227,7 @@ actually be implemented.
 
 \multirow{3}{0.3\textwidth}{Software Decision Module} 
 & M2\\
-& M4\\
+& M4 \textcolor{red}{Aren't 4,5,6 all referenced in your SRS? Having 3 modes? - CM}\\
 & M5\\
 & M6\\
 & M12\\
@@ -286,7 +286,7 @@ system or by standard programming language libraries.
 
 \subsubsection{Menu Module (\mref{mHH3})}
 \begin{description}
-\item[Secrets:]Structure to display title, instructions, buttons. 
+\item[Secrets:]Structure to display title, instructions, buttons. \textcolor{red}{Feel free to be general as UI elements can and should change as the design goes on. Move details to services in which titles, buttons and such will be implicitly required to satisfy - CM}
 \item[Services:]Displays the main menu.
 \item[Implemented By:] DNA Says
 \end{description}
@@ -300,14 +300,14 @@ system or by standard programming language libraries.
 
 \subsubsection{Update Module (\mref{mHH8})}
 \begin{description}
-\item[Secrets:]The structure of the refreshing of the display.
+\item[Secrets:]The structure of the refreshing of the display. \textcolor{red}{Reword, there is not structure to refresh a display - CM} \\
 \item[Services:]Updates the display.
 \item[Implemented By:] DNA Says
 \end{description}
 
 \subsubsection{ShowInst Module (\mref{mHH9})}
 \begin{description}
-\item[Secrets:]The format of the instructions.
+\item[Secrets:]The format of the instructions. \textcolor{red}{Not all these need to formats and structures - CM}
 \item[Services:]Displays the instructions.
 \item[Implemented By:] DNA Says
 \end{description}
@@ -348,8 +348,8 @@ system or by standard programming language libraries.
 
 \subsubsection{JP Module (\mref{mHH4})}
 \begin{description}
-\item[Secrets:]The size of keys and their positions, the implementation of the display. The algorithm and implementation of the song pattern, both visual and auditory.
-\item[Services:]Starts the mode JP Says with nine buttons in square form. It plays the elements that are contained in the pattern, then checks for the user's input. If the user clicked the correct button then its sound is played and its key is highlighted temporarily, and the score is incremented. In the meantime, the program appends a random element to the pattern to be played, and the pattern is played, and the cycle goes on. However, if the user clicks on the wrong key, the game will be over. The game will also end if the user clicks on one correct key, and waits for more than four seconds, assuming that there is more than one element in the last pattern played. If the user clicks on the main menu button, the program will redirect them to the main menu.
+\item[Secrets:]The size of keys and their positions, the implementation of the display. The algorithm and implementation of the song pattern, both visual and auditory. \textcolor{red}{Only one thing!  - CM}
+\item[Services:]Starts the mode JP Says with nine buttons in square form. It plays the elements that are contained in the pattern, then checks for the user's input. If the user clicked the correct button then its sound is played and its key is highlighted temporarily, and the score is incremented. In the meantime, the program appends a random element to the pattern to be played, and the pattern is played, and the cycle goes on. However, if the user clicks on the wrong key, the game will be over. The game will also end if the user clicks on one correct key, and waits for more than four seconds, assuming that there is more than one element in the last pattern played. If the user clicks on the main menu button, the program will redirect them to the main menu. \textcolor{red}{WAY to much stuff. This is hardly modularity in the traditional sense of having independent self-contained modules.  - CM}
 \item[Implemented By:] DNA Says
 \end{description}
 
@@ -464,6 +464,8 @@ implementation of B.  Figure \ref{FigUH} illustrates the use relation between
 the modules. Each level of the hierarchy offers a testable and usable subset of the
 system, and modules in the higher level of the hierarchy are essentially simpler
 because they use modules from the lower levels.
+\textcolor{red}{What is the middle, unnamed module?! - CM} \\
+\textcolor{red}{From kareem to menu for example, you don't need to two lines. The menu uses kareem in a stack like structure. It places the kareem page on the stack, and removes it. Don't make these loops. What it tells me is that menu needs kareem to work, and kareem needs menu to work, which doesn't make sense. - CM} \\
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{UsesHierarchy.png}

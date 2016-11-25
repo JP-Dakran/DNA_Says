@@ -2,6 +2,6 @@
 
 Team Name: DNA
 
-Team Members: Kareem Abdel Mesih (abdelk2), John-Paul Dakran (dakranj), Shady Nessim (nessimss)
+Team Members: Kareem Abdel Mesih, John-Paul Dakran, Shady Nessim
 
-This project is a reimplementation of the famous game "Simon Says"
+This project is a reimplementation of the famous game "Simon Says."

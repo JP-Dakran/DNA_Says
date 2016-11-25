@@ -1,3 +1,3 @@
 # Project Name
 
-This folder contains the project schedule Gantt Chart.
+This folder contains the project's Gantt Chart.

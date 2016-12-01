@@ -1,0 +1,15 @@
+User must have Python and matching Pygame version installed.
+
+To install and run:
+
+- If applicable, double click on the DNA_Says source file
+
+OR
+
+- Download this directory
+- Open DNA_SAYS in Python IDLE
+- Press F5, OR press Run, then Run Module
+
+To uninstall:
+
+- Nothing required, simply close IDLE

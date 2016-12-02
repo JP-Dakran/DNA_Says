@@ -1,0 +1,243 @@
+\documentclass[12pt, titlepage]{article}
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=red,
+    urlcolor=blue
+}
+\usepackage[round]{natbib}
+
+\title{SE 3XA3: Test Report\\DNA Says}
+
+\author{Team 10, DNA
+		\\ Kareem Abdel Mesih - abdelk2
+		\\ John-Paul Dakran - dakranj
+		\\ Shady Nessim - nessimss
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+\listoftables
+\listoffigures
+
+\begin{table}[h]
+\caption{\bf Revision History}
+\begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
+\toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
+\midrule
+01/12/16 & 1.0 & Addition of Comp. to Existing Imp.\\
+01/12/16 & 1.1 & Addition of Automated Testing\\
+02/12/16 & 1.2 & Addition of  Unit Testing\\
+02/12/16 & 1.3 & Addition of Changes Due To Testing\\
+02/12/16 & 2.0 & Revision Of The Sections Above\\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\pagenumbering{arabic}
+
+\section{Functional Requirements Evaluation}
+
+\section{Nonfunctional Requirements Evaluation}
+
+\subsection{Usability}
+		
+\subsection{Performance}
+
+\subsection{etc.}
+	
+\section{Comparison to Existing Implementation}	
+
+\par The core functionality of DNA Says relies on the original game Simon Says. However, the implementation is vastly different to preserve originality and creativity. The main principle of having the computer play a specific pattern and having the user repeat it is evident in both implementations. It is how the pattern is presented that is modified in DNA Says, rather than having one mode that contains only four buttons. This is what makes DNA Says unique. 
+\\
+\par DNA Says contains three modes, compared to one, which are Kareem Says, JP Says and Shady Says. In Kareem Says, the user is presented a piano keyboard in which the pattern will be played on, both by the computer and the user. Of course, the colors of the keys match those of a real piano, and each key is assigned one unique tone. When a key is clicked, if it is correct then it will light up in red to indicate the selection and its tone will play. Otherwise, the whole window will flash to indicate the entry of a wrong key and losing the game and a harmonic combination of tones will play. This wil then reset back to level one, and the score to zero.
+\\
+\par As for JP Says, there are nine buttons of different colors, arranged as a three-by-three grid in the middle of the screen. Each button is assigned a unique tone that is played every time the button is pressed. To advance with this mode, the user must repeat the pattern that is played by the computer. The pattern is incremented by one element for every level. The new element that is added is completely random every time. Winning and losing conditions follow those of Kareem Says.
+\\
+\par Finally, Shady Says. There are four buttons of different colors, arranged as a two-by-two grid in the middle of the screen. For every time that any button is pressed, a completely random tone (out of four in total) will play. To advance with this mode, the user must repeat the pattern that is played by the computer. The pattern is incremented by one element for every level. The new element that is added is completely random every time. Winning and losing conditions follow those of Kareem Says.
+
+
+\section{Unit Testing}
+
+\par The program was split up into modules, each to be tested separately. This unit testing ensured that changes made to the game did not break the basic functionality of the game. The testing conducted is detailed below.
+
+\begin{itemize}
+
+\item \textbf {Test \#1}
+\begin{itemize}
+\item{Test: main}
+\item{Type: manual}
+\item{Description: checks if the program is initialized as required}
+\item{Initial State: program not yet started}
+\item{Input: the program is started}
+\item{Output: Pygame is initialized, fonts and sounds are loaded, and required variables are made global}
+\item{Result: PASS!}
+\end{itemize}
+
+\item \textbf {Test \#2}
+\begin{itemize}
+\item{Test: setup}
+\item{Type: automated}
+\item{Description: checks if the screen is refreshed and setup again with every transition}
+\item{Initial State: either on the menu or in any mode}
+\item{Input: if on the menu, then a mode is selected. If in any mode, then the back button is clicked}
+\item{Output: transition to the desired screen is successful, without any left-overs from the previous screen}
+\item{Result: PASS!}
+\end{itemize}
+
+\item \textbf {Test \#3}
+\begin{itemize}
+\item{Test: update}
+\item{Type: automated}
+\item{Description: checks if the screen is updated accordingly inside any mode}
+\item{Initial State: in any mode, no changes appear on the screen yet}
+\item{Input: The computer or user plays an element from the pattern}
+\item{Output: the screen updates accordingly and displays that change}
+\item{Result: PASS!}
+\end{itemize}
+
+\item \textbf {Test \#4}
+\begin{itemize}
+\item{Test: showInst}
+\item{Type: manual}
+\item{Description: checks if instructions are displayed on screen at the desired location}
+\item{Initial State: the instruction are not shown on the screen}
+\item{Input: showInst() is invoked}
+\item{Output: the instructions appear at the bottom left corner}
+\item{Result: PASS!}
+\end{itemize}
+
+\item \textbf {Test \#5}
+\begin{itemize}
+\item{Test: showGoBack}
+\item{Type: manual}
+\item{Description: checks if the back button text is displayed at the desired location}
+\item{Initial State: the back button text is not shown on the screen}
+\item{Input: showGoBack() is invoked}
+\item{Output: the back button text appears at the top left corner}
+\item{Result: PASS!}
+\end{itemize}
+
+\item \textbf {Test \#6}
+\begin{itemize}
+\item{Test: showScore}
+\item{Type:manual }
+\item{Description: checks if the score is displayed at the desired location}
+\item{Initial State: the score is not shown on the screen}
+\item{Input: showScore() is invoked}
+\item{Output: the score appears at the top right corner}
+\item{Result: PASS!}
+\end{itemize}
+
+\item \textbf {Test \#7}
+\begin{itemize}
+\item{Test: flashKeyAnimation}
+\item{Type: automated}
+\item{Description: checks if key animations are error proof with regards to wrong input}
+\item{Initial State: game launched in any mode}
+\item{Input: the computer or user plays an element from the pattern}
+\item{Output: button visuals and associated sound, no output for inputs that are out of range}
+\item{Result: PASS!}
+\end{itemize}
+
+\item \textbf {Test \#8}
+\begin{itemize}
+\item{Test: drawKeys}
+\item{Type: automated}
+\item{Description: checks if the correct buttons are drawn at their correct locations depending on the mode selected}
+\item{Initial State: on the menu}
+\item{Input: any mode is selected}
+\item{Output: the correct buttons appear on the screen along with the back button, at their correct locations}
+\item{Result: PASS!}
+\end{itemize}
+
+\item \textbf {Test \#9}
+\begin{itemize}
+\item{Test: changeBackgroundAnimation}
+\item{Type: automated}
+\item{Description: checks the changing of the background color after every level change}
+\item{Initial State: game launches in any mode}
+\item{Input: the user beats or loses a level}
+\item{Output: the background changes accordingly}
+\item{Result: PASS!}
+\end{itemize}
+
+\item \textbf {Test \#10}
+\begin{itemize}
+\item{Test: gameOverAnimation}
+\item{Type: automated}
+\item{Description: checks if the screen flashes when a user loses at any level}
+\item{Initial State: the computer is waiting for the user's input}
+\item{Input: the user enters a wrong element from the pattern that the computer played}
+\item{Output: the screen flashes}
+\item{Result: PASS!}
+\end{itemize}
+
+\item \textbf {Test \#11}
+\begin{itemize}
+\item{Test: checkForQuit}
+\item{Type: manual}
+\item{Description: checks if the program terminates when the quit button is clicked}
+\item{Initial State: any screen is displayed}
+\item{Input: checkForQuit() is invoked}
+\item{Output: the program terminates}
+\item{Result: PASS!}
+\end{itemize}
+
+\end{itemize}
+
+\par The program does not produce any output files. Unit testing is therefore not applicable for output files in this project.
+
+\section{Changes Due to Testing}
+\begin{itemize}
+\item \textbf {Note Release Time}
+\par After playing the game, it was decided that the release time of the notes should be increased. The piano notes then were re-recorded to accommodate that decision.
+
+
+\item \textbf {Button Colors in JP Says}
+\par Rather than having different shades of a single color present, the team decided to follow a systematic order. It was decided that it would be best to have all seven colors of the rainbow present, along with black and white to have nine visually distinguishable colors/shades to use.
+
+\item \textbf {Back Button}
+\par After conducting the survey, it was agreed upon that the back button did not look elegant. Several individuals had suggested to simply display the word “Back” on the button rather than the left-pointing arrow.
+
+\item \textbf {Redisplaying Text on Screen}
+\par As the level changed (incremented or decremented), the text on the screen now flickers to indicate that change along with the change of colors in the background.
+
+\item \textbf {Endless Playing}
+\par The game has been changed to be able to reach an infinite level number. The user can continuously play until they lose or choose to stop playing for any circumstances. In addition, the song pattern in Kareem Says has been implemented in a way where the song will loop to the beginning uninterruptedly to accommodate that change.
+\end{itemize}
+
+\section{Automated Testing}
+
+\par Generally, automated testing is not the most effective with games as there has not been a fixed artificial intelligence implementation that can mimic a human being’s behaviour exactly. However, as a team, automated testing was made a possibility (to an extent). For all three modes, a random selection algorithm was implemented to select a random button to play back to the computer after it displayed the pattern, that is biased towards picking the correct button. This can somewhat identify with the behaviour of a child playing this game. Another short algorithm was developed to then analyze the given input at every level and compare it to the pattern that the computer played. If it matched exactly then the test would advance to the next level. Otherwise, the mode resets back to level one.
+\\
+\par This program produces no output files and therefore automated testing for output files is not applicable.
+
+		
+\section{Trace to Requirements}
+		
+\section{Trace to Modules}		
+
+\section{Code Coverage Metrics}
+
+\par As an estimate, all tests including manual, automated and unit testing have covered ninety-five percent of the code written in the source file. Each method/module has been tested separately as well as coupled with other appropriate modules. This estimate holds true as all modules have been tested thoroughly with various inputs when applicable, and now the output of all remains correct as expected. Please refer to the Automated Testing and Unit Testing sections above to further validate the coverage rate estimate.
+
+\bibliographystyle{plainnat}
+
+\bibliography{SRS}
+
+\end{document}

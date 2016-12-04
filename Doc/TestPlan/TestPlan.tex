@@ -359,6 +359,16 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \item Execution: The tester will launch the game and observe that the two versions of the game have different menus and one has a single mode of play while the other has 3 modes of play.
 \end{itemize}
 
+\item \textbf{Test \#19: User will wait 5 seconds after pattern is played in both versions }
+\begin{itemize}
+\item Test ID: FT-PAR-2
+\item Type: Functional, Dynamic, Manual 		
+\item Initial State: One of the three modes will be open, pattern will play					
+\item Input: User does not repeat the pattern after it is played by the computer for 5 seconds	
+\item Output: In existing implementation, game does not end and user can get back to the game to repeat the pattern at any time. In our implemented version, user has 4 seconds to start repeating the pattern otherwise level is failed				
+\item Execution: The tester will open any of the modes and wait for pattern to be played, user will then wait for 5 seconds and observe response ofthe game, whether game ends or not.
+\end{itemize}
+
 \subsection{Tests for Nonfunctional Requirements}
 
 \subsubsection{Look and Feel}

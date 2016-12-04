@@ -42,6 +42,7 @@
 2016/10/31 & 1.5 & Addition of Unit Tests\\
 2016/10/31 & 1.6 & Addition of Appendix\\
 2016/10/31 & 2.0 & Revision 0\\
+2016/12/04 & 3.0 & Revision 1\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -132,13 +133,13 @@ Automated testing will be used to test the basic functionality of the system. A 
 For unit testing we will be using the Python testing framework unittest. Sometimes referred to as “PyUnit”, this is a Python language version of JUnit, by Kent Beck and Erich Gamma. \\
 For system testing we will be running the game by executing it on various devices and observing the functionalities. \\
 For code analysis we will use humans with coding experience to analyze the code.
-.
+
 \begin{table}[h]
 \caption{\bf Testing Tools}
 \begin{tabularx}{\textwidth}{p{3cm}p{6cm}X}
 \toprule {\bf Tool} & {\bf Description} & {\bf Use}\\
 \midrule
-unittest & Unit Testing Framework & Unit Testing \\
+unittest & Python Unit Testing Framework & Unit Testing \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -147,6 +148,8 @@ unittest & Unit Testing Framework & Unit Testing \\
 \label{subsec:sched}
 See testing schedule here:
 \href{run:GanttChart.gan} {Gantt Chart}\\
+
+
 \section{System Test Description}
 	
 \subsection{Tests for Functional Requirements}
@@ -329,7 +332,7 @@ See testing schedule here:
 \item Type: Functional, Dynamic, Automated	
 \item Initial State: One of the three modes will be open. 					
 \item Input: Mouse click on an incorrect button. 					
-\item Output: The screen will flash white three times, the score will be reset to 0 and the user will be redirected to level 1.					
+\item Output: The screen will flash white three times, the score will be reset to 0 and the user will be redirected to level 1.
 \item Execution: The tester will play the game, they will input the incorrect pattern. The user will verify that they are redirected to level 1.
 \end{itemize}
 
@@ -342,6 +345,7 @@ See testing schedule here:
 \item Output: The user is directed back to main menu.					
 \item Execution: The tester will play the game, wait until a pattern is being played. Tester will clickthe exit button while pattern is still being demonstrated. The user will verify that they are redirected back to main menu.
 \end{itemize}
+
 
 \end{itemize}
 
@@ -358,6 +362,7 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \item Output: The existing game will open on main menu page which has brief game instructions and one button to start playing game, game has only one mode. In recreated implementation, main menu will open which has no instructions and 3 modes of play to choose from.
 \item Execution: The tester will launch the game and observe that the two versions of the game have different menus and one has a single mode of play while the other has 3 modes of play.
 \end{itemize}
+
 
 \item \textbf{Test \#19: User will wait 5 seconds after pattern is played in both versions }
 \begin{itemize}
@@ -380,6 +385,10 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \end{itemize}
 
 \end{itemize}
+
+
+
+
 
 \subsection{Tests for Nonfunctional Requirements}
 
@@ -435,7 +444,6 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \item Initial State: Program opened on main menu page.		
 \item Input: Select any mode and start playing.
 \item Output: A simple one element pattern will be played, user asked to repeat the pattern. Pattern length will keep incrementing
-\item Execution: A simple one element pattern will be played, user asked to repeat the pattern. Pattern length will keep incrementing
 \item Execution: User starts playing the game and following patterns shown, instructions will be provided on every page. Test is succesful if all test population are able to complete at least the first level.
 \end{itemize}
 
@@ -446,7 +454,7 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \item Initial State: Program opened on main menu page.		
 \item Input: Select any mode and start playing.
 \item Output: User will progress through levels. If the user gets the pattern right, the next pattern is played after a change in colour in the background. If user enters wrong pattern screen flashes three times with five notes sounding as well
-\item Execution: User plays the game, records satisfaction with game response to patterns entered (both right or wrong patterns).
+\item Execution: User plays the game, records satisfaction with game response to patterns entered (both right or wrong patterns). Test is successful if user clearly understands whether they passed a certain level or failed it.
 \end{itemize}
 
 \item \textbf{Test \#7: The product shall produce patterns both visually and auditory so as to accommodate for users with visual or auditory problems that they can use an alternative pattern means.}
@@ -456,7 +464,7 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \item Initial State: Program opened on main menu page.		
 \item Input: Mute sound on system. Select any mode and start playing.
 \item Output: User will follow pattern shown based only on visual buttons displayed.
-\item Execution: User plays the game with no sounds, records ease of game and whether there were challenges following the patterns with no sounds.
+\item Execution: User plays the game with no sounds, records ease of game and whether there were challenges following the patterns with no sounds. Test is successful if tester gets through at least 1 level with sounds muted.
 \end{itemize}
 \end{itemize}
 
@@ -469,7 +477,7 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \item Initial State: Program launched on main menu page		
 \item Input: User selects mode and starts playing, enters wrong button not to follow pattern.
 \item Output: Screen should flash three times with five notes played.		
-\item Execution: User observes how long the game takes to detect wrong pattern entered, user records satisfaction with game response.
+\item Execution: User observes how long the game takes to detect wrong pattern entered, user records satisfaction with game response. Test is successful if user is aware if they lost the level or else they know they passed the level.
 \end{itemize}
 
 \item \textbf{Test \#9: The application must be specific to each button press. Button press confusion or mistake must not be tolerated}
@@ -482,14 +490,14 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \item Execution: User plays game until reaching a level with a long pattern, the user follows the pattern correctly except for the last note, records whether the game detects the incorrect note or regards the pattern as correct.
 \end{itemize}
 
-\item \textbf{Test \#10: The application must be able to produce and receive patterns as long as 50 elements and greater.}
+\item \textbf{Test \#10: The application must be able to produce and receive patterns of infinite length.}
 \begin{itemize}
 \item Test ID: NFT-P3
 \item Type: Structural, Dynamic, Manual				
 \item Initial State: Program opened on main menu page.		
 \item Input: Select mode and start playing, reaches level 50, completes level.
 \item Output: The game will be able to carry on normally.
-\item Execution: User reaches level 50 of any mode which consists of a pattern of length 50 buttons
+\item Execution: User reaches level 50 of any mode which consists of a pattern of length 50 buttons.
 \end{itemize}
 \end{itemize}
 
@@ -638,7 +646,6 @@ In this subsection, tests will be conducted in parallel for existing implementat
 
 	
 \section{Comparison to Existing Implementation}	
-\textcolor{red}{Be more specific, choose which tests would pass a parallel test - CM} \\
 \par The implementation of DNA Says and Simon Says have many similarities and differences that will be outlined in this section. The main principle of the game stays constant however there are many improvements and modifications that have been added to truly make DNA Says unique. 
 \\
 \par The main significant difference between DNA Says and Simon Says is the fact that DNA Says has three modes. The original version of Simon Says only has one mode or one level which consists of 4 buttons that display the pattern to the user. In contrast DNA Says has three levels or three modes; each with a different implementation but overall the same theory from the Simon Says implementation. The first mode, Kareem Says, consists of piano keys that will display the pattern to the user. The second mode, Shady Says, consists of four different coloured buttons that will display the pattern to the user. The final mode, JP Says, consists of nine different coloured buttons that will display the pattern to the user. 
@@ -646,6 +653,7 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \par Along with all the differences that truly make the game DNA Says truly unique, there are numerous similarities as the essence of the game is the same. Both implementations of the game have a main menu that allow the user to enter a mode and play the game. During a game, there is a score box which displays the current score and there is also an exit button which will allow the user to return to the main menu.  
 \\
 \par Under tests for functional requirements a section has been added for parallel tests in which some function is performed in both the existing implementation and the recreated implementation to highlight the differences and similarities between the two programs. For example when user does not enter the pattern within a certain time frame in the recreated version, they lose the game, whereas in the existing implementation the user has infinite amount of time to enter the pattern after it is displayed.
+
 				
 \section{Unit Testing Plan}
 A set of unit tests will be performed on functions used in the implementation of the system. This testing is to ensure that changes to the game do not break the basic functioning of the game. The different modules will be unit tested independently to make sure that changes to the game do not break the basic functionality of the game. Test cases that will be used are outlined below.
@@ -673,7 +681,19 @@ A set of unit tests will be performed on functions used in the implementation of
 \item Output: transition to the desired screen is successful, without any left-overs from the previous screen
 \end{itemize}
 
-\item \textbf{Test \#1}
+
+\item \textbf{Test \#3}
+\begin{itemize}
+\item Test: update
+\item Type: Functional, dynamic, automated.		
+\item Description:   checks if the screen is updated accordingly inside any moden	
+\item Initial State:  in any mode, no changes appear on the screen yet
+\item Input: The computer or user plays an element from the pattern
+\item Output: the screen updates accordingly and displays that change
+\end{itemize}
+
+
+\item \textbf{Test \#4}
 \begin{itemize}
 \item Test: checkForQuit
 \item Type: Functional, dynamic, manual		
@@ -683,7 +703,7 @@ A set of unit tests will be performed on functions used in the implementation of
 \item Output: Game quits.	
 \end{itemize}
 
-\item \textbf{Test \#2}
+\item \textbf{Test \#5}
 \begin{itemize}
 \item Test: flashKeyAnimation
 \item Type: Unit Test (dynamic, automated)			
@@ -693,7 +713,7 @@ A set of unit tests will be performed on functions used in the implementation of
 \item Output: Button visual and associated sound, no output for inputs out of range or non existing		
 \end{itemize}
 
-\item \textbf{Test \#3}
+\item \textbf{Test \#6}
 \begin{itemize}
 \item Test: changeBackgroundAnimation
 \item Type: Unit Test (dynamic, automated)			
@@ -703,7 +723,7 @@ A set of unit tests will be performed on functions used in the implementation of
 \item Output: Patterns displayed, background colour changed.	
 \end{itemize}
 
-\item \textbf{Test \#4}
+\item \textbf{Test \#7}
 \begin{itemize}
 \item Test: gameOverAnimation
 \item Type: Unit Test (dynamic, automated)			
@@ -713,7 +733,7 @@ A set of unit tests will be performed on functions used in the implementation of
 \item Output: Screen flashes white three times and chord played.		
 \end{itemize}
 
-\item \textbf{Test \#5}
+\item \textbf{Test \#8}
 \begin{itemize}
 \item Test: getKeyClicked
 \item Type: Unit Test (dynamic, automated)				

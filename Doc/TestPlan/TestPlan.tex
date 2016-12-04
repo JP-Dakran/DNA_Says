@@ -663,6 +663,16 @@ A set of unit tests will be performed on functions used in the implementation of
 \item Output:  Pygame is initialized, fonts and sounds are loaded, and required variables are made global
 \end{itemize}
 
+\item \textbf{Test \#2}
+\begin{itemize}
+\item Test: setup
+\item Type: Functional, dynamic, automated.		
+\item Description:  checks if the screen is refreshed and setup again with every transition	
+\item Initial State: either on the menu or in any mode
+\item Input: if on the menu, then a mode is selected. If in any mode, then the back button is clicked
+\item Output: transition to the desired screen is successful, without any left-overs from the previous screen
+\end{itemize}
+
 \item \textbf{Test \#1}
 \begin{itemize}
 \item Test: checkForQuit

@@ -413,6 +413,18 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \item Results: The three developers ran this test. Upon reaching level 10, all buttons in the pattern were pressed correctly except the last one. The system detected the wrong input and game was reset to level 1. Test passed.
 \end{itemize}
 
+\item \textbf{Test \#10: The application must be able to produce and receive patterns of infinite length.}
+\begin{itemize}
+\item Test ID: NFT-P3
+\item Type: Structural, Dynamic, Manual				
+\item Initial State: Program opened on main menu page.		
+\item Input: Select mode and start playing, reaches level 30, completes level.
+\item Output: The game will be able to carry on normally.
+\item Execution: User reaches level 30 of any mode which consists of a pattern of length 30 buttons.
+\item Results: The three developers collaborated to reach level 30. Each developer memorized 10 buttons so together they were able to reach level 30. Following level 30, the system played a pattern of length 31, therefore level 31 was reached. Game has infinite levels. Test passed.
+\end{itemize}
+\end{itemize}
+
 
 	
 \section{Comparison to Existing Implementation}	

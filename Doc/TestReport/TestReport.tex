@@ -291,6 +291,17 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \item Result: Pass
 \end{itemize}
 
+\item \textbf{Test \#20: User will lose level on both implementations }
+\begin{itemize}
+\item Test ID: FT-PAR-3
+\item Type: Functional, Dynamic, Manual 		
+\item Initial State: One of the three modes will be open in recreated version, pattern will play. In original implementation the game will be running and pattern playing				
+\item Input: User enters incorrect pattern in both games.
+\item Output: Both games end when wrong pattern is played and new pattern starts playing right away in both versions.			
+\item Execution: The tester will play a wrong pattern to see whether game goes back to main menu or game just resets to level 1. In both versions game just restarts from level 1.
+\item Result: Pass
+\end{itemize}
+
 \end{itemize}
 
 \section{Nonfunctional Requirements Evaluation}

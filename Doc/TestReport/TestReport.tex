@@ -402,6 +402,17 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \item Results: No users reported any confusion or misunderstanding in user survey. Ease of use rating averaged 9 out of 10 so it is clear users did not face difficulties with understanding the game's response to their input. Test passed.
 \end{itemize}
 
+\item \textbf{Test \#9: The application must be specific to each button press. Button press confusion or mistake must not be tolerated}
+\begin{itemize}
+\item Test ID: NFT-P2
+\item Type: Structural, Dynamic, Manual			
+\item Initial State: Application launched on any mode.			
+\item Input: User follows all notes of a pattern except the last one, presses a wrong button			
+\item Output: Game should immediately detect wrong pattern input and flash three times.				
+\item Execution: User plays game until reaching a level with a long pattern, the user follows the pattern correctly except for the last note, records whether the game detects the incorrect note or regards the pattern as correct.
+\item Results: The three developers ran this test. Upon reaching level 10, all buttons in the pattern were pressed correctly except the last one. The system detected the wrong input and game was reset to level 1. Test passed.
+\end{itemize}
+
 
 	
 \section{Comparison to Existing Implementation}	

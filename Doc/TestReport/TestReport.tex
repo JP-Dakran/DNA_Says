@@ -3,6 +3,8 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage{mdframed}
+\mdfsetup{nobreak=true}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -42,6 +44,8 @@
 02/12/16 & 1.3 & Addition of Changes Due To Testing\\
 02/12/16 & 2.0 & Revision Of The Sections Above\\
 05/12/16 & 2.1 & Addition of Functional Requirements Evaluation\\
+05/12/16 & 2.2 & Addition of Non-Functional Requirements Evaluation\\
+05/12/16 & 2.3 & Addition of User Survey Results\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -306,11 +310,180 @@ In this subsection, tests will be conducted in parallel for existing implementat
 
 \section{Nonfunctional Requirements Evaluation}
 
-\subsection{Usability}
-		
-\subsection{Performance}
+\subsection{Look and Feel}
+\begin{itemize}
+\item \textbf{Test \#1: The product shall have an appealing colourful appearance.}
+\begin{itemize}
+\item Test ID: NFT-L1
+\item Type: Structural, Static, Manual				
+\item Initial State: Program installed onto system but not launched.		
+\item Input: Launch program
+\item Output: Menu page should have a colourful appearance.		
+\item Execution: User launches the application and observes the menu's appearance, then the user satisfaction is recorded by the user.
+\item Results: The average rating for appearance from user surveys was 8.2 out of 10, and several users left comments in the user survey about the simplicity and attractiveness of the design. These results imply a pass on this test.
+\end{itemize}
 
-\subsection{etc.}
+\item \textbf{Test \#2: The buttons must be well designed and coloured}
+\begin{itemize}
+\item Test ID: NFT-L2
+\item Type: Structural, Dynamic, Manual			
+\item Initial State: Application launched on main menu page.			
+\item Input: User selects mode to play			
+\item Output: Game starts in selected mode				
+\item Execution: User presses buttons on menu and again in mode selected to follow pattern, satisfaction regarding button appearance is recorded by the user. Test is succesful if buttons are all same shape in JP and Shady modes and if they are in a piano format in Karim mode. Buttons all be different colours in JP and Shady modes, and white and black in Karim mode.
+\item Results: The average rating for appearance in the user survey was 8.2 out of 10. The buttons are a part of the appearance. No specific positive or negative comments were made on the buttons so that is a pass for this test. Buttons are all the same shape but different colours in JP and Shady modes and buttons form a piano design in black and white colours in Karim mode. Therefore test is passed.
+\end{itemize}
+
+\item \textbf{Test \#3: The product shall have attractive sound patterns. The associated sounds with buttons must be well constructed and notes must follow harmonically.}
+\begin{itemize}
+\item Test ID: NFT-L3
+\item Type: Structural, Dynamic, Manual				
+\item Initial State: Program opened on main menu page.		
+\item Input: Select mode and start playing
+\item Output: There will be a note played with every button pressed.	
+\item Execution: User tries to follow visual/audio pattern shown, and observes sounds made by buttons pressed. Patterns to follow should have notes associated with them them compose a song or a little rhyme. User satisfaction with sounds is recorded. Test is successful if pattern sounds meaningful, if succesive notes have harmony to a certain extent.
+\item Results: Results for song rating were exceptionally high with an average of 8.8 out of 10 from user surveys. Several users left comments that they liked the Love Story song in the Karim mode. Test passed.
+\end{itemize}
+\end{itemize}
+
+\subsection{Usability}
+\begin{itemize}
+\item \textbf{Test \#4: The product shall be easy to install for all users.}
+\begin{itemize}
+\item Test ID: NFT-U1
+\item Type: Structural, Dynamic, Manual			
+\item Initial State: User's system active and functional, and game not installed 		
+\item Input: User installs game via USB			
+\item Output: Game is installed easily onto system				
+\item Execution: User plugs in USB to transfer game from the USB key to their system, game is transferred with ease. User review is then recorded. Test is succesful if all testers are able to successfully install the game.
+\item Results: All the users from the test population were able to quickly install the game on their devices. Test passed.
+\end{itemize}
+
+\item \textbf{Test \#5: The product shall be easy to use for people of all ages, including children.}
+\begin{itemize}
+\item Test ID: NFT-U2
+\item Type: Structural, Dynamic, Manual				
+\item Initial State: Program opened on main menu page.		
+\item Input: Select any mode and start playing.
+\item Output: A simple one element pattern will be played, user asked to repeat the pattern. Pattern length will keep incrementing
+\item Execution: User starts playing the game and following patterns shown, instructions will be provided on every page. Test is succesful if all test population are able to complete at least the first level.
+\item Results: The entire test population was able to get past level one, that means everyone understood how the game is supposed to be played. Test passed.
+\end{itemize}
+
+\item \textbf{Test \#6: The product shall produce a nice animation in the background when user loses or wins a level.}
+\begin{itemize}
+\item Test ID: NFT-U3
+\item Type: Structural, Dynamic, Manual				
+\item Initial State: Program opened on main menu page.		
+\item Input: Select any mode and start playing.
+\item Output: User will progress through levels. If the user gets the pattern right, the next pattern is played after a change in colour in the background. If user enters wrong pattern screen flashes three times with five notes sounding as well
+\item Execution: User plays the game, records satisfaction with game response to patterns entered (both right or wrong patterns). Test is successful if user clearly understands whether they passed a certain level or failed it.
+\item Results: Since all users got high scores above 6, that means users understood whether they passed each level or not. No comments were left on confusion regarding level progression. Test passed.
+\end{itemize}
+
+\item \textbf{Test \#7: The product shall produce patterns both visually and auditory so as to accommodate for users with visual or auditory problems that they can use an alternative pattern means.}
+\begin{itemize}
+\item Test ID: NFT-U4
+\item Type: Structural, Dynamic, Manual				
+\item Initial State: Program opened on main menu page.		
+\item Input: Mute sound on system. Select any mode and start playing.
+\item Output: User will follow pattern shown based only on visual buttons displayed.
+\item Execution: User plays the game with no sounds, records ease of game and whether there were challenges following the patterns with no sounds. Test is successful if tester gets through at least 1 level with sounds muted.
+\item Results: The three developers as well as two additional testers ran this test and played the game with the sounds muted. All five testers were able to progress through level 1. Test passed.
+\end{itemize}
+\end{itemize}
+
+\subsection{Performance}
+\begin{itemize}
+\item \textbf{Test \#8: The application should be able to recognize whether the user has entered the right pattern as soon as they finish pressing the last button.}
+\begin{itemize}
+\item Test ID: NFT-P1
+\item Type: Structural, Dynamic, Manual				
+\item Initial State: Program launched on main menu page		
+\item Input: User selects mode and starts playing, enters wrong button not to follow pattern.
+\item Output: Screen should flash three times with five notes played.		
+\item Execution: User observes how long the game takes to detect wrong pattern entered, user records satisfaction with game response. Test is successful if user is aware if they lost the level or else they know they passed the level.
+\item Results: No users reported any confusion or misunderstanding in user survey. Ease of use rating averaged 9 out of 10 so it is clear users did not face difficulties with understanding the game's response to their input. Test passed.
+\end{itemize}
+
+\item \textbf{Test \#9: The application must be specific to each button press. Button press confusion or mistake must not be tolerated}
+\begin{itemize}
+\item Test ID: NFT-P2
+\item Type: Structural, Dynamic, Manual			
+\item Initial State: Application launched on any mode.			
+\item Input: User follows all notes of a pattern except the last one, presses a wrong button			
+\item Output: Game should immediately detect wrong pattern input and flash three times.				
+\item Execution: User plays game until reaching a level with a long pattern, the user follows the pattern correctly except for the last note, records whether the game detects the incorrect note or regards the pattern as correct.
+\item Results: The three developers ran this test. Upon reaching level 10, all buttons in the pattern were pressed correctly except the last one. The system detected the wrong input and game was reset to level 1. Test passed.
+\end{itemize}
+
+\item \textbf{Test \#10: The application must be able to produce and receive patterns of infinite length.}
+\begin{itemize}
+\item Test ID: NFT-P3
+\item Type: Structural, Dynamic, Manual				
+\item Initial State: Program opened on main menu page.		
+\item Input: Select mode and start playing, reaches level 30, completes level.
+\item Output: The game will be able to carry on normally.
+\item Execution: User reaches level 30 of any mode which consists of a pattern of length 30 buttons.
+\item Results: The three developers collaborated to reach level 30. Each developer memorized 10 buttons so together they were able to reach level 30. Following level 30, the system played a pattern of length 31, therefore level 31 was reached. Game has infinite levels. Test passed.
+\end{itemize}
+\end{itemize}
+
+\subsection{Operational and Environmental}
+\begin{itemize}
+\item \textbf{Test \#11: The product is to be used on laptops and desktops.}
+\begin{itemize}
+\item Test ID: NFT-O1
+\item Type: Structural, Dynamic, Manual				
+\item Initial State: Laptop and desktop devices available for use.		
+\item Input: Launch program on laptop and desktop
+\item Output: Game should launch on both laptop and desktop.		
+\item Execution: User launches the application on different devices, laptops and desktops. User records whether application launches on every device or not.
+\item Results: Game was launched succesfully on various laptops and desktops.
+\end{itemize}
+
+\item \textbf{Test \#12: The product shall run on Windows, Linux and Mac OS X environments.}
+\begin{itemize}
+\item Test ID: NFT-O2
+\item Type: Structural, Dynamic, Manual			
+\item Initial State: OS ready for use with game installed.		
+\item Input: User launches application.			
+\item Output: Game starts; main menu page appears.				
+\item Execution: User tests application on three different operating systems: Windows, Linux, and Mac OS X and records whether errors occur on any of the environments.
+\item Results: Game was installed and launched on Mac OS, Windows and Linux computers succesfully. Test passed.
+\end{itemize}
+\end{itemize}
+
+\subsection{Security}
+\begin{itemize}
+\item \textbf{Test \#13: The application shall not store, transmit, or upload any user data.}
+\begin{itemize}
+\item Test ID: NFT-S1
+\item Type: Structural, Dynamic, Manual				
+\item Initial State: Application launched in any game state.		
+\item Input: Follow pattern.
+\item Output: Pattern displayed, flashing with wrong input.		
+\item Execution: Developer plays game, checks if application has stored any information from user.
+\item Results: All three developers confirm that game does not store, transmit, or upload any personal user data. Test passed.
+\end{itemize}
+\end{itemize}
+
+
+\subsection{Cultural}
+\begin{itemize}
+\item \textbf{Test \#14: The application shall not contain any images or text that can be reasonably foreseen as potentially offensive to users of all cultures, backgrounds and ethnicities.}
+\begin{itemize}
+\item Test ID: NFT-C1
+\item Type: Structural, Dynamic, Manual				
+\item Initial State: Application launched in any game state.		
+\item Input: Follow pattern.
+\item Output: Patterns displayed, flashing with wrong input.		
+\item Execution: A test group comprising of different cultural backgrounds or at least knowledge of different cultural backgrounds play the game and record whether any component of the game is deemed offensive to any known culture or religion to test group.
+\item Results: Friendliness rating averaged 9 out of 10 from user surverys. No user commented on any offensive material. Test passed.
+\end{itemize}
+\end{itemize}
+
+
 	
 \section{Comparison to Existing Implementation}	
 
@@ -489,6 +662,48 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \section{Code Coverage Metrics}
 
 \par As an estimate, all tests including manual, automated and unit testing have covered ninety-five percent of the code written in the source file. Each method/module has been tested separately as well as coupled with other appropriate modules. This estimate holds true as all modules have been tested thoroughly with various inputs when applicable, and now the output of all remains correct as expected. Please refer to the Automated Testing and Unit Testing sections above to further validate the coverage rate estimate.
+
+
+\section{Usability Survey Results}
+Calculated averages for user surveys:
+\begin{mdframed}[linewidth=1pt]
+\begin{center}
+{\bf \large User Experience Survey}\\[\baselineskip]
+\end{center}
+\noindent The following survey should be filled out after playing the game for at least 15 minutes.\\
+\\
+\noindent {\bf Time spent playing:} 20 minutes
+\\
+\\
+\noindent Please provide a ranking between 0 and 10 in each of the following categories, 0 being most boring, 10 being most fun.  Please include notes on the things you liked and the ones you did not like. Please also include suggestions to improve the game.\\[\baselineskip]
+\noindent \begin{tabularx}{\textwidth}{@{}p{3.5cm}X@{}}
+\noindent {\bf Entertainment:}\\
+7.5\\
+\\
+\noindent {\bf Friendliness:}\\
+9\\
+\\
+\noindent {\bf Ease of use:}\\
+9\\
+\\
+\noindent {\bf Game Difficulty:}\\
+7\\
+\\
+\noindent {\bf Appearance:}\\
+8.2\\
+\\
+\noindent {\bf Sounds:}\\
+8\\
+\\
+\noindent {\bf Song:}\\
+8.8\\
+\\
+\noindent {\bf High Score:}\\
+9\\
+\\
+{\bf Comments:} & \\[5\baselineskip]
+\end{tabularx}
+\end{mdframed}
 
 \bibliographystyle{plainnat}
 

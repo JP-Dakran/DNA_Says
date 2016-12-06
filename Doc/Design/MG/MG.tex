@@ -307,7 +307,7 @@ system or by standard programming language libraries.
 
 \subsubsection{ShowInst Module (\mref{mHH9})}
 \begin{description}
-\item[Secrets:]The format of the instructions. \textcolor{red}{Not all these need to formats and structures - CM}
+\item[Secrets:] Houses the way the instructions will be displayed to the user.
 \item[Services:]Displays the instructions.
 \item[Implemented By:] DNA Says
 \end{description}
@@ -348,8 +348,8 @@ system or by standard programming language libraries.
 
 \subsubsection{JP Module (\mref{mHH4})}
 \begin{description}
-\item[Secrets:]The size of keys and their positions, the implementation of the display. The algorithm and implementation of the song pattern, both visual and auditory. \textcolor{red}{Only one thing!  - CM}
-\item[Services:]Starts the mode JP Says with nine buttons in square form. It plays the elements that are contained in the pattern, then checks for the user's input. If the user clicked the correct button then its sound is played and its key is highlighted temporarily, and the score is incremented. In the meantime, the program appends a random element to the pattern to be played, and the pattern is played, and the cycle goes on. However, if the user clicks on the wrong key, the game will be over. The game will also end if the user clicks on one correct key, and waits for more than four seconds, assuming that there is more than one element in the last pattern played. If the user clicks on the main menu button, the program will redirect them to the main menu. \textcolor{red}{WAY to much stuff. This is hardly modularity in the traditional sense of having independent self-contained modules.  - CM}
+\item[Secrets:]The size of keys and their positions, the implementation of the display. The algorithm and implementation of the song pattern, both visual and auditory.
+\item[Services:]Starts the mode JP Says with nine buttons in square form. It plays the elements that are contained in the pattern, then checks for the user's input. If the user clicked the correct button then its sound is played and its key is highlighted temporarily, and the score is incremented. In the meantime, the program appends a random element to the pattern to be played, and the pattern is played, and the cycle goes on. However, if the user clicks on the wrong key, the game will be over. The game will also end if the user clicks on one correct key, and waits for more than four seconds, assuming that there is more than one element in the last pattern played. If the user clicks on the main menu button, the program will redirect them to the main menu. 
 \item[Implemented By:] DNA Says
 \end{description}
 
@@ -464,14 +464,13 @@ implementation of B.  Figure \ref{FigUH} illustrates the use relation between
 the modules. Each level of the hierarchy offers a testable and usable subset of the
 system, and modules in the higher level of the hierarchy are essentially simpler
 because they use modules from the lower levels.
-\textcolor{red}{What is the middle, unnamed module?! - CM} \\
-\textcolor{red}{From kareem to menu for example, you don't need to two lines. The menu uses kareem in a stack like structure. It places the kareem page on the stack, and removes it. Don't make these loops. What it tells me is that menu needs kareem to work, and kareem needs menu to work, which doesn't make sense. - CM} \\
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{UsesHierarchy.png}
 \caption{Use hierarchy among modules}
 \label{FigUH}
 \end{figure}
+*The middle unnamed box in the hierarchy module is not a module - it is a connection point for easier portrayal of the hierarchy.
 %\section*{References}
 
 \bibliographystyle {plainnat}

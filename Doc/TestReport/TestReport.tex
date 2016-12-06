@@ -4,6 +4,7 @@
 \usepackage{tabularx}
 \usepackage{hyperref}
 \usepackage{mdframed}
+\usepackage{float}
 \mdfsetup{nobreak=true}
 \hypersetup{
     colorlinks,
@@ -13,6 +14,7 @@
     urlcolor=blue
 }
 \usepackage[round]{natbib}
+
 
 \title{SE 3XA3: Test Report\\DNA Says}
 
@@ -652,13 +654,11 @@ In this subsection, tests will be conducted in parallel for existing implementat
 \\
 \par This program produces no output files and therefore automated testing for output files is not applicable.
 
-		
 \section{Trace to Requirements}
-		
-		\begin{table}[!htbp]
+		\begin{table}[H]
 			\begin{tabular}{ll}
 				\toprule
-				Requirement & Test \\
+				Requirement & Tests \\
 				\midrule
 				\multicolumn{2}{c}{Functional Requirements Testing} \\
 				\midrule
@@ -678,6 +678,16 @@ In this subsection, tests will be conducted in parallel for existing implementat
 				Requirement \#14 & FT-FUNC-6 \\
 				Requirement \#15 & FT-FUNC-7 \\
 				Requirement \#16 & FT-FUNC-8, FT-PAR-3 \\
+					\bottomrule
+			\end{tabular}
+			\caption{Trace Between Tests and Functional Requirements}
+			\label{Table}
+		\end{table}
+		
+	\begin{table}[H]
+			\begin{tabular}{ll}
+				\toprule
+				Requirement & Tests \\
 				\midrule
 				\multicolumn{2}{c}{Non-functional Requirements Testing} \\
 				\midrule
@@ -702,7 +712,7 @@ In this subsection, tests will be conducted in parallel for existing implementat
 				Requirement \#21 & NFT-C1 \\
 				\bottomrule
 			\end{tabular}
-			\caption{Trace Between Tests and Requirements}
+			\caption{Trace Between Tests and Non-functional Requirements}
 			\label{Table}
 		\end{table}
 

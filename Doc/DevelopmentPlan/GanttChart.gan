@@ -37,7 +37,7 @@
         </taskproperties>
         <task id="0" name="1) Team Formation" color="#8cb6ce" meeting="false" start="2016-09-14" duration="3" complete="0" expand="false">
             <task id="8" name="1.1) Find Team Members" meeting="false" start="2016-09-14" duration="1" complete="0" expand="true"/>
-            <task id="10" name="1.2) Branstorming Ideas" color="#8cb6ce" meeting="false" start="2016-09-14" duration="3" complete="0" expand="true"/>
+            <task id="10" name="1.2) Brainstorming Ideas" color="#8cb6ce" meeting="false" start="2016-09-14" duration="3" complete="0" expand="true"/>
             <task id="12" name="1.3) Vote on Ideas" color="#8cb6ce" meeting="false" start="2016-09-16" duration="1" complete="0" expand="true"/>
             <task id="14" name="1.4) Project Selection" color="#8cb6ce" meeting="true" start="2016-09-17" duration="0" complete="0" expand="true"/>
         </task>
